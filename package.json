@@ -52,7 +52,7 @@
   "files": [
     "codes.js",
     "index.js",
-    "stores.js"
+    "inventories.js"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
