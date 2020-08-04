@@ -11,9 +11,10 @@ $ npm install tesla-inventory --save
 ## Usage
 
 ```js
-const teslaInventory = require('tesla-inventory')
-
-const results = await teslaInventory('fr', { model: 's', condition: 'used' })
+(async () => {
+  const teslaInventory = require('tesla-inventory')
+  const results = await teslaInventory('fr', { model: 's', condition: 'used' })
+})()
 ```
 
 ## API
