@@ -1,5 +1,12 @@
 # tesla-inventory
 
+![Last version](https://img.shields.io/github/tag/Kikobeats/tesla-inventory.svg?style=flat-square)
+[![Build Status](https://img.shields.io/travis/com/Kikobeats/tesla-inventory/master.svg?style=flat-square)](https://travis-ci.com/github/Kikobeats/tesla-inventory)
+[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/tesla-inventory.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/tesla-inventory)
+[![Dependency status](https://img.shields.io/david/Kikobeats/tesla-inventory.svg?style=flat-square)](https://david-dm.org/Kikobeats/tesla-inventory)
+[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/tesla-inventory.svg?style=flat-square)](https://david-dm.org/Kikobeats/tesla-inventory#info=devDependencies)
+[![NPM Status](https://img.shields.io/npm/dm/tesla-inventory.svg?style=flat-square)](https://www.npmjs.org/package/tesla-inventory)
+
 > Retrieve real-time data from Tesla Inventory.
 
 ## Install
