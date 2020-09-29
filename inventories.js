@@ -38,6 +38,30 @@ module.exports = {
     region: 'Europe'
   },
   fr: { country: 'France', language: 'fr', market: 'FR', region: 'Europe' },
+  gb: {
+    country: 'United Kingdom',
+    language: 'en',
+    market: 'GB',
+    region: 'Europe'
+  },
+  si: {
+    country: 'Slovenia',
+    language: 'en',
+    market: 'SL',
+    region: 'Europe'
+  },
+  pl: {
+    country: 'Poland',
+    language: 'pl',
+    market: 'PL',
+    region: 'Europe'
+  },
+  gr: {
+    country: 'Greece',
+    language: 'el',
+    market: 'GR',
+    region: 'Europe'
+  },
   ie: {
     country: 'Ireland',
     language: 'en',
