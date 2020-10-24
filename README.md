@@ -1,7 +1,7 @@
 # tesla-inventory
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/tesla-inventory.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/com/Kikobeats/tesla-inventory/master.svg?style=flat-square)](https://travis-ci.com/github/Kikobeats/tesla-inventory)
+[![Build Status](https://img.shields.io/travis/com/teslahunt/tesla-inventory/master.svg?style=flat-square)](https://travis-ci.com/github/teslahunt/tesla-inventory)
 [![Coverage Status](https://img.shields.io/coveralls/Kikobeats/tesla-inventory.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/tesla-inventory)
 [![Dependency status](https://img.shields.io/david/Kikobeats/tesla-inventory.svg?style=flat-square)](https://david-dm.org/Kikobeats/tesla-inventory)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/tesla-inventory.svg?style=flat-square)](https://david-dm.org/Kikobeats/tesla-inventory#info=devDependencies)
