@@ -25,7 +25,9 @@
     "teslamotors"
   ],
   "dependencies": {
-    "got": "~11.8.0"
+    "cheerio": "~1.0.0-rc.3",
+    "got": "~11.8.0",
+    "write-json-file": "~4.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
@@ -51,6 +53,8 @@
   },
   "files": [
     "codes.js",
+    "codes.json",
+    "files",
     "index.js",
     "inventories.js"
   ],
@@ -59,6 +63,7 @@
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
+    "postinstall": "node scripts/postinstall.js",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
