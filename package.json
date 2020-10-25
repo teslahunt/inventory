@@ -56,7 +56,8 @@
     "codes.json",
     "files",
     "index.js",
-    "inventories.js"
+    "inventories.js",
+    "scripts"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
