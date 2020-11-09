@@ -6,7 +6,7 @@
     "topSpeed": "210 km/h",
     "engineTorque": "430 Nm",
     "enginePower": "302 hp",
-    "efficiency": "16.0 kWh/100 km",
+    "efficiency": "16.0 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "1961 kg"
@@ -18,7 +18,7 @@
     "topSpeed": "210 km/h",
     "engineTorque": "525 Nm",
     "enginePower": "329 hp",
-    "efficiency": "15.4 kWh/100 km",
+    "efficiency": "15.4 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2090 kg"
@@ -30,7 +30,7 @@
     "topSpeed": "230 km/h",
     "engineTorque": "441 Nm",
     "enginePower": "315 hp",
-    "efficiency": "16.7 kWh/100 km",
+    "efficiency": "16.7 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2000 kg"
@@ -42,7 +42,7 @@
     "topSpeed": "230 km/h",
     "engineTorque": "525 Nm",
     "enginePower": "329 hp",
-    "efficiency": "15.8 kWh/100 km",
+    "efficiency": "15.8 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2090 kg"
@@ -54,7 +54,7 @@
     "topSpeed": "230 km/h",
     "engineTorque": "441 Nm",
     "enginePower": "315 hp",
-    "efficiency": "15.6 kWh/100 km",
+    "efficiency": "15.6 kWh / 100 km",
     "dimensions": "4978 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2000 kg"
@@ -66,7 +66,7 @@
     "topSpeed": "230 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "329 hp",
-    "efficiency": "15.3 kWh/100 km",
+    "efficiency": "15.3 kWh / 100 km",
     "dimensions": "4978 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2090 kg"
@@ -78,7 +78,7 @@
     "topSpeed": "230 km/h",
     "engineTorque": "441 Nm",
     "enginePower": "373 hp",
-    "efficiency": "16.9 kWh/100 km",
+    "efficiency": "16.9 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2108 kg"
@@ -90,7 +90,7 @@
     "topSpeed": "210 km/h",
     "engineTorque": "601 Nm",
     "enginePower": "470 hp",
-    "efficiency": "16.9 kWh/100 km",
+    "efficiency": "16.9 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2112 kg"
@@ -102,7 +102,7 @@
     "topSpeed": "210 km/h",
     "engineTorque": "601 Nm",
     "enginePower": "470 hp",
-    "efficiency": "16.9 kWh/100 km",
+    "efficiency": "16.9 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2146 kg"
@@ -114,7 +114,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "417 hp",
-    "efficiency": "16.1 kWh/100 km",
+    "efficiency": "16.1 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2188 kg"
@@ -126,7 +126,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "931 Nm",
     "enginePower": "463 hp",
-    "efficiency": "17.7 kWh/100 km",
+    "efficiency": "17.7 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2239 kg"
@@ -138,7 +138,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "417 hp",
-    "efficiency": "17.0 kWh/100 km",
+    "efficiency": "17.0 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2200 kg"
@@ -150,7 +150,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "931 Nm",
     "enginePower": "532 hp",
-    "efficiency": "17.7 kWh/100 km",
+    "efficiency": "17.7 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2250 kg"
@@ -162,7 +162,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "660 Nm",
     "enginePower": "517 hp",
-    "efficiency": "15.8 kWh/100 km",
+    "efficiency": "15.8 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2215 kg"
@@ -174,7 +174,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "967 Nm",
     "enginePower": "605 hp",
-    "efficiency": "16.3 kWh/100 km",
+    "efficiency": "16.3 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2241 kg"
@@ -186,7 +186,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "329 hp",
-    "efficiency": "17.8 kWh/100 km",
+    "efficiency": "17.8 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2090 kg"
@@ -198,7 +198,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "660 Nm",
     "enginePower": "517 hp",
-    "efficiency": "16.4 kWh/100 km",
+    "efficiency": "16.4 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2215 kg"
@@ -210,7 +210,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "??? Nm",
     "enginePower": "1100 hp",
-    "efficiency": "16.9 kWh/100 km",
+    "efficiency": "16.9 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2241 kg"
@@ -222,7 +222,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "967 Nm",
     "enginePower": "785 hp",
-    "efficiency": "16.9 kWh/100 km",
+    "efficiency": "16.9 kWh / 100 km",
     "dimensions": "4971 x 1963 x 1445",
     "wheelBase": "2959 mm",
     "curbWeight": "2241 kg"
@@ -234,7 +234,7 @@
     "topSpeed": "210 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "329 hp",
-    "efficiency": "18.0 kWh/100 km",
+    "efficiency": "18.0 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2330 kg"
@@ -246,7 +246,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "417 hp",
-    "efficiency": "18.0 kWh/100 km",
+    "efficiency": "18.0 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2390 kg"
@@ -258,7 +258,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "931 Nm",
     "enginePower": "532 hp",
-    "efficiency": "16.5 kWh/100 km",
+    "efficiency": "16.5 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2440 kg"
@@ -270,7 +270,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "660 Nm",
     "enginePower": "517 hp",
-    "efficiency": "17.7 kWh/100 km",
+    "efficiency": "17.7 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2459 kg"
@@ -282,7 +282,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "967 Nm",
     "enginePower": "605 hp",
-    "efficiency": "18.7 kWh/100 km",
+    "efficiency": "18.7 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2509 kg"
@@ -294,7 +294,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "658 Nm",
     "enginePower": "329 hp",
-    "efficiency": "21.3 kWh/100 km",
+    "efficiency": "21.3 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2407 kg"
@@ -306,7 +306,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "660 Nm",
     "enginePower": "417 hp",
-    "efficiency": "19.7 kWh/100 km",
+    "efficiency": "19.7 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2459 kg"
@@ -318,7 +318,7 @@
     "topSpeed": "250 km/h",
     "engineTorque": "967 Nm",
     "enginePower": "785 hp",
-    "efficiency": "16.5 kWh/100 km",
+    "efficiency": "16.5 kWh / 100 km",
     "dimensions": "5037 x 2070 x 1626",
     "wheelBase": "2964 mm",
     "curbWeight": "2509 kg"
@@ -330,7 +330,7 @@
     "topSpeed": "210 km/h",
     "engineTorque": "350 Nm",
     "enginePower": "201 hp",
-    "efficiency": "14.7 kWh/100 km",
+    "efficiency": "14.7 kWh / 100 km",
     "dimensions": "4694 x 1933 x 1443",
     "wheelBase": "2875 mm",
     "curbWeight": "1611 kg"
@@ -342,7 +342,7 @@
     "topSpeed": "225 km/h",
     "engineTorque": "350 Nm",
     "enginePower": "201 hp",
-    "efficiency": "12.2 kWh/100 km",
+    "efficiency": "12.2 kWh / 100 km",
     "dimensions": "4694 x 1933 x 1443",
     "wheelBase": "2875 mm",
     "curbWeight": "1704 kg"
@@ -354,7 +354,7 @@
     "topSpeed": "225 km/h",
     "engineTorque": "416 Nm",
     "enginePower": "258 hp",
-    "efficiency": "14.6 kWh/100 km",
+    "efficiency": "14.6 kWh / 100 km",
     "dimensions": "4694 x 1933 x 1443",
     "wheelBase": "2875 mm",
     "curbWeight": "1672 kg"
@@ -366,7 +366,7 @@
     "topSpeed": "225 km/h",
     "engineTorque": "430 Nm",
     "enginePower": "258 hp",
-    "efficiency": "14.3 kWh/100 km",
+    "efficiency": "14.3 kWh / 100 km",
     "dimensions": "4694 x 1933 x 1443",
     "wheelBase": "2875 mm",
     "curbWeight": "1726 kg"
@@ -378,7 +378,7 @@
     "topSpeed": "225 km/h",
     "engineTorque": "527 Nm",
     "enginePower": "346 hp",
-    "efficiency": "13.4 kWh/100 km",
+    "efficiency": "13.4 kWh / 100 km",
     "dimensions": "4694 x 1933 x 1443",
     "wheelBase": "2875 mm",
     "curbWeight": "1847 kg"
@@ -390,7 +390,7 @@
     "topSpeed": "260 km/h",
     "engineTorque": "639 Nm",
     "enginePower": "450 hp",
-    "efficiency": "14.2 kWh/100 km",
+    "efficiency": "14.2 kWh / 100 km",
     "dimensions": "4694 x 1933 x 1443",
     "wheelBase": "2875 mm",
     "curbWeight": "1847 kg"
