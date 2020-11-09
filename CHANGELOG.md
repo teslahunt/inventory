@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Kikobeats/tesla-inventory/compare/v1.0.20...v1.1.0) (2020-11-09)
+
 ### [1.0.20](https://github.com/Kikobeats/tesla-inventory/compare/v1.0.19...v1.0.20) (2020-11-09)
 
 
