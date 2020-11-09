@@ -52,7 +52,7 @@
     "node": ">= 10"
   },
   "files": [
-    "acceleration.json",
+    "info.json",
     "codes.json",
     "index.js",
     "inventories.js",
