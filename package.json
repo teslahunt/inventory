@@ -52,9 +52,9 @@
     "node": ">= 10"
   },
   "files": [
-    "info.json",
     "codes.json",
     "index.js",
+    "info.json",
     "inventories.js",
     "scripts"
   ],
