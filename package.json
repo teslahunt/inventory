@@ -60,7 +60,6 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "codes": "(npm run postinstall && finepack && git add codes.json && git commit -m 'build: update codes' --no-verify) || true",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
@@ -72,8 +71,9 @@
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "nyc ava",
-    "update": "ncu -u",
-    "update:check": "ncu -- --error-level 2"
+    "update:check": "ncu -- --error-level 2",
+    "update:codes": "npm run postinstall && git add codes.json && git commit -m 'build: update codes' --no-verify && git push",
+    "update:dependencies": "ncu -u"
   },
   "license": "MIT",
   "commitlint": {
