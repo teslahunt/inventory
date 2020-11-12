@@ -65,7 +65,7 @@
     "lint": "standard-markdown README.md && standard",
     "postinstall": "node scripts/postinstall.js",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
-    "prerelease": "npm run update:check && npm run contributors && npm run codes",
+    "prerelease": "npm run update:check && npm run contributors && npm run update:codes",
     "pretest": "npm run lint",
     "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
