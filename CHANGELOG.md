@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Kikobeats/tesla-inventory/compare/v1.1.3...v1.2.0) (2020-11-21)
+
+
+### Features
+
+* add prices by code ([bc8ac32](https://github.com/Kikobeats/tesla-inventory/commit/bc8ac32600750a84a9c5118cc6dfa7a89b430fc0))
+
 ### [1.1.3](https://github.com/Kikobeats/tesla-inventory/compare/v1.1.2...v1.1.3) (2020-11-18)
 
 ### [1.1.2](https://github.com/Kikobeats/tesla-inventory/compare/v1.1.1...v1.1.2) (2020-11-13)
