@@ -64,7 +64,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
-    "prerelease": "npm run update:check && npm run contributors && npm run update:codes",
+    "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
     "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
