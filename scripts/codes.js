@@ -1,8 +1,16 @@
 'use strict'
 
-const writeJsonFile = require('write-json-file')
+const jsonFuture = require('json-future')
+const { chain } = require('lodash')
 const cheerio = require('cheerio')
 const got = require('got')
+
+const sortObjectByKey = obj =>
+  chain(obj)
+    .toPairs()
+    .sortBy(0)
+    .fromPairs()
+    .value()
 
 const main = async () => {
   const body = await got('https://tesla-api.timdorr.com/vehicle/optioncodes', {
@@ -31,7 +39,7 @@ const main = async () => {
     return { ...acc, [code]: titles[index] }
   }, {})
 
-  await writeJsonFile('codes.json', optionCodes)
+  jsonFuture.save('codes.json', sortObjectByKey(optionCodes))
 }
 
 main()

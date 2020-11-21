@@ -24,23 +24,22 @@
     "teslaapi",
     "teslamotors"
   ],
-  "dependencies": {
-    "cheerio": "~1.0.0-rc.3",
-    "got": "~11.8.0",
-    "write-json-file": "~4.3.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
+    "cheerio": "latest",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "coveralls": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
+    "got": "latest",
     "husky": "latest",
+    "json-future": "latest",
     "lint-staged": "latest",
+    "lodash": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
     "prettier-standard": "latest",
@@ -56,6 +55,7 @@
     "index.js",
     "info.json",
     "inventories.js",
+    "prices.json",
     "scripts"
   ],
   "scripts": {
@@ -63,7 +63,6 @@
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
-    "postinstall": "node scripts/postinstall.js",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
     "prerelease": "npm run update:check && npm run contributors && npm run update:codes",
     "pretest": "npm run lint",
@@ -72,8 +71,9 @@
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "nyc ava",
     "update:check": "ncu -- --error-level 2",
-    "update:codes": "npm run postinstall && git add codes.json && git commit -m 'build: update codes' --no-verify && git push",
-    "update:dependencies": "ncu -u"
+    "update:codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build: update codes' --no-verify && git push) || true",
+    "update:dependencies": "ncu -u",
+    "update:prices": "(node scripts/prices.js && git add prices.json && git commit -m 'build: update prices' --no-verify && git push) || true"
   },
   "license": "MIT",
   "commitlint": {
