@@ -23,9 +23,6 @@ module.exports = async (inventory, opts, gotOpts) => {
     searchParams: {
       query: JSON.stringify({
         query: {
-          options: {},
-          arrangeby: 'Price',
-          order: 'asc',
           ...inventoryProps,
           ...opts
         }
