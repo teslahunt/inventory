@@ -6,7 +6,15 @@ const { chain } = require('lodash')
 const teslaInventory = require('..')
 
 // only countries with EURO currency
-const { is, gb, no, ch, se, ...teslaInventories } = require('../inventories')
+const {
+  se, // Sweden coin is not Euro
+  dk, // Denmark coin is not Euro
+  is, // Island is not EU
+  ch, // Switzerland is not EU
+  gb, // United Kingdom is not EU
+  no, // Norgway is not EU
+  ...teslaInventories
+} = require('../inventories')
 
 const MODEL_LETTER = ['x', 's', '3']
 
