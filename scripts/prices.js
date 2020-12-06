@@ -7,6 +7,7 @@ const teslaInventory = require('..')
 
 // only countries with EURO currency
 const {
+  cz, // Croatia  coin is not Euro
   se, // Sweden coin is not Euro
   dk, // Denmark coin is not Euro
   is, // Island is not EU
