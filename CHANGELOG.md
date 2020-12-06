@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.15](https://github.com/Kikobeats/tesla-inventory/compare/v1.2.14...v1.2.15) (2020-12-06)
+
+
+### Bug Fixes
+
+* remove no euro countries ([614c663](https://github.com/Kikobeats/tesla-inventory/commit/614c6632bb6a270a25c81bd501887e3af88dadc5))
+
 ### [1.2.14](https://github.com/Kikobeats/tesla-inventory/compare/v1.2.13...v1.2.14) (2020-12-05)
 
 ### [1.2.13](https://github.com/Kikobeats/tesla-inventory/compare/v1.2.12...v1.2.13) (2020-12-05)
