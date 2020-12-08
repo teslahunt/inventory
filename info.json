@@ -203,6 +203,18 @@
     "wheelBase": "2959 mm",
     "curbWeight": "2215 kg"
   },
+  "Model S Long Range Plus": {
+    "acceleration": "3.8 secs",
+    "range": "647 km",
+    "batteryPack": "100 kWh",
+    "topSpeed": "250 km/h",
+    "engineTorque": "660 Nm",
+    "enginePower": "517 hp",
+    "efficiency": "16.4 kWh / 100 km",
+    "dimensions": "4971 x 1963 x 1445",
+    "wheelBase": "2959 mm",
+    "curbWeight": "2215 kg"
+  },
   "Model S Plaid": {
     "acceleration": "2.1 secs",
     "range": "836 km",
