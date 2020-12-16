@@ -33,11 +33,13 @@ const sortObjectByKey = obj =>
 const addItem = item => {
   if (item.price) {
     const trimCode = item.code.replace('$', '')
-    if (!trimCode.startsWith('MDL') && !pricesByCode[trimCode]) {
-      console.log('adding', trimCode, item.price)
-      pricesByCode[trimCode] = item.price
-      console.log(JSON.stringify(item, null, 2))
-      console.log('---')
+    if (!trimCode.startsWith('MDL')) {
+      if (!pricesByCode[trimCode] || pricesByCode[trimCode] > item.price) {
+        console.log('adding', trimCode, item.price)
+        pricesByCode[trimCode] = item.price
+        console.log(JSON.stringify(item, null, 2))
+        console.log('---')
+      }
     }
   }
 }
