@@ -323,6 +323,18 @@
     "wheelBase": "2964 mm",
     "curbWeight": "2459 kg"
   },
+  "Model X Long Range Plus": {
+    "acceleration": "4.6 secs",
+    "range": "597 km",
+    "batteryPack": "100 kWh",
+    "topSpeed": "250 km/h",
+    "engineTorque": "660 Nm",
+    "enginePower": "417 hp",
+    "efficiency": "19.7 kWh / 100 km",
+    "dimensions": "5037 x 2070 x 1626",
+    "wheelBase": "2964 mm",
+    "curbWeight": "2459 kg"
+  },
   "Model X Performance": {
     "acceleration": "2.9 secs",
     "range": "490 km",
