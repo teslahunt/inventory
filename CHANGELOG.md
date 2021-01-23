@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.40](https://github.com/Kikobeats/tesla-inventory/compare/v1.2.39...v1.2.40) (2021-01-23)
+
 ### [1.2.39](https://github.com/Kikobeats/tesla-inventory/compare/v1.2.38...v1.2.39) (2021-01-23)
 
 ### [1.2.38](https://github.com/Kikobeats/tesla-inventory/compare/v1.2.37...v1.2.38) (2021-01-23)
