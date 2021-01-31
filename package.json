@@ -2,7 +2,7 @@
   "name": "tesla-inventory",
   "description": "Retrieve real-time data from Tesla Inventory.",
   "homepage": "https://nicedoc.io/Kikobeats/tesla-inventory",
-  "version": "1.2.46",
+  "version": "1.2.47",
   "main": "index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
