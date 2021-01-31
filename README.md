@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://teslahunt.io/banner-red.png" alt="@teslahunt/title">
-  <br>
+  <br><br>
 </div>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/tesla-inventory.svg?style=flat-square)
