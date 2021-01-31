@@ -1,4 +1,7 @@
-# tesla-inventory
+<div align="center">
+  <img src="https://teslahunt.io/banner-red.png" alt="@teslahunt/title">
+  <br>
+</div>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/tesla-inventory.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/com/teslahunt/tesla-inventory/master.svg?style=flat-square)](https://travis-ci.com/github/teslahunt/tesla-inventory)
