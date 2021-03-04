@@ -63,7 +63,7 @@
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
-    "postrelease": "npm run release:tags && npm run release:github && ci-publish",
+    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
     "release": "standard-version -a",
@@ -73,7 +73,8 @@
     "update:check": "ncu -- --error-level 2",
     "update:codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build(update): codes' --no-verify && git push) || true",
     "update:dependencies": "ncu -u",
-    "update:prices": "(node scripts/prices.js && git add prices.json && git commit -m 'build(update): prices' --no-verify && git push) || true"
+    "update:prices": "(node scripts/prices.js && git add prices.json && git commit -m 'build(update): prices' --no-verify && git push) || true",
+    "update": "ncu -u"
   },
   "license": "MIT",
   "commitlint": {

@@ -2,34 +2,21 @@ language: node_js
 
 node_js:
   - node
+  # - lts/*
 
 after_success: npm run coverage
 
 stages:
   - Test
-    if: type != cron AND branch = master AND commit_message !~ /(docs|release|no-release)/
+    if: branch = master AND commit_message !~ /(docs|release|no-release)/
   - name: Release
-    if: type != cron AND branch = master AND commit_message !~ /(docs|release|no-release)/
-  - name: Update
-    if: branch = master AND type = cron
+    if: branch = master AND commit_message !~ /(docs|release|no-release)/
 
 jobs:
   include:
-    - stage: Update
-      node_js: lts/*
-      install: npm install --no-package-lock
-      before_script:
-        - git config user.email ${GITHUB_EMAIL:-"travis@travis-ci.org"}
-        - git config user.name ${GITHUB_USER:-"Travis CI"}
-        - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
-        - git checkout master
-      script:
-        - npm run update:codes
-        - npm run update:prices
     - stage: Release
-      node_js: lts/*
       install: npm install --no-package-lock
-      before_script:
+      before_deploy:
         - git config user.email ${GITHUB_EMAIL:-"travis@travis-ci.org"}
         - git config user.name ${GITHUB_USER:-"Travis CI"}
         - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
