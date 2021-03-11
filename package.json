@@ -70,11 +70,11 @@
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "nyc ava",
+    "update": "ncu -u",
     "update:check": "ncu -- --error-level 2",
     "update:codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build(update): codes' --no-verify && git push) || true",
     "update:dependencies": "ncu -u",
-    "update:prices": "(node scripts/prices.js && git add prices.json && git commit -m 'build(update): prices' --no-verify && git push) || true",
-    "update": "ncu -u"
+    "update:prices": "(node scripts/prices.js && git add prices.json && git commit -m 'build(update): prices' --no-verify && git push) || true"
   },
   "license": "MIT",
   "commitlint": {
