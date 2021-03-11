@@ -7,7 +7,7 @@ const inventories = require('./inventories')
 const TESLA_INVENTORY_API =
   'https://www.tesla.com/inventory/api/v1/inventory-results'
 
-module.exports = async (inventory, opts, gotOpts = {}) => {
+module.exports = async (inventory, opts, gotOpts) => {
   const inventoryProps = inventories[inventory]
 
   if (!inventoryProps) {
@@ -28,8 +28,7 @@ module.exports = async (inventory, opts, gotOpts = {}) => {
         }
       })
     },
-    ...gotOpts,
-    headers: { 'user-agent': undefined, ...gotOpts.headers }
+    ...gotOpts
   })
 
   return body.results
