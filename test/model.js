@@ -5,7 +5,7 @@ const test = require('ava')
 const teslaInventory = require('..')
 
 test('works with Model S', async t => {
-  const results = await teslaInventory('fr', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: 's'
   })
@@ -14,7 +14,7 @@ test('works with Model S', async t => {
 })
 
 test('works with Model X', async t => {
-  const results = await teslaInventory('fr', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: 'x'
   })
@@ -23,7 +23,7 @@ test('works with Model X', async t => {
 })
 
 test('works with Model 3', async t => {
-  const results = await teslaInventory('fr', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: '3'
   })

@@ -14,6 +14,7 @@ const {
   ch, // Switzerland is not EU
   gb, // United Kingdom is not EU
   no, // Norgway is not EU
+  us, // United States is not EU
   ...teslaInventories
 } = require('../inventories')
 

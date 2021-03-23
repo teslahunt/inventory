@@ -1,4 +1,10 @@
 module.exports = {
+  us: {
+    country: 'United States',
+    language: 'en',
+    market: 'US',
+    region: 'North America'
+  },
   at: {
     country: 'Österreich',
     language: 'de',
