@@ -60,6 +60,7 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
+    "codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build(update): codes' --no-verify && git push) || true",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
@@ -75,7 +76,6 @@
     "test": "nyc ava",
     "update": "ncu -u",
     "update:check": "ncu -- --error-level 2",
-    "update:codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build(update): codes' --no-verify && git push) || true",
     "update:dependencies": "ncu -u"
   },
   "license": "MIT",
