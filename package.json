@@ -61,7 +61,7 @@
     "index.js",
     "info.json",
     "inventories.js",
-    "prices.json",
+    "prices",
     "scripts"
   ],
   "scripts": {
