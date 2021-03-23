@@ -36,19 +36,19 @@
     "git-authors-cli": "latest",
     "git-dirty": "latest",
     "got": "latest",
-    "husky": "latest",
     "json-future": "latest",
     "lint-staged": "latest",
     "lodash": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
     "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 14"
   },
   "files": [
     "codes.json",
@@ -66,6 +66,9 @@
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
+    "prices": "npm run prices:europe && npm run prices:usa",
+    "prices:europe": "(node scripts/prices/europe.js && git add prices/europe.json && git commit -m 'build(update): prices for Europe' --no-verify && git push) || true",
+    "prices:usa": "(node scripts/prices/usa.js && git add prices/usa.json && git commit -m 'build(update): prices for USA' --no-verify && git push) || true",
     "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
@@ -73,8 +76,7 @@
     "update": "ncu -u",
     "update:check": "ncu -- --error-level 2",
     "update:codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build(update): codes' --no-verify && git push) || true",
-    "update:dependencies": "ncu -u",
-    "update:prices": "(node scripts/prices.js && git add prices.json && git commit -m 'build(update): prices' --no-verify && git push) || true"
+    "update:dependencies": "ncu -u"
   },
   "license": "MIT",
   "commitlint": {
@@ -82,21 +84,19 @@
       "@commitlint/config-conventional"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "package.json": [
-      "finepack"
-    ],
     "*.js": [
       "prettier-standard"
     ],
     "*.md": [
       "standard-markdown"
+    ],
+    "package.json": [
+      "finepack"
     ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx lint-staged"
   }
 }

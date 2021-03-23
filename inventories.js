@@ -1,10 +1,4 @@
 module.exports = {
-  us: {
-    country: 'United States',
-    language: 'en',
-    market: 'US',
-    region: 'North America'
-  },
   at: {
     country: 'Österreich',
     language: 'de',
@@ -77,5 +71,11 @@ module.exports = {
     market: 'PT',
     region: 'Europe'
   },
-  se: { country: 'Sweden', language: 'sv', market: 'SE', region: 'Europe' }
+  se: { country: 'Sweden', language: 'sv', market: 'SE', region: 'Europe' },
+  usa: {
+    country: 'United States',
+    language: 'en',
+    market: 'US',
+    region: 'North America'
+  }
 }
