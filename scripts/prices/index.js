@@ -1,5 +1,6 @@
 'use strict'
 
+const debug = require('debug-logfmt')('price')
 const jsonFuture = require('json-future')
 const { chain } = require('lodash')
 
@@ -28,10 +29,9 @@ const run = async ({ pricesByCode, inventories }) => {
       const trimCode = item.code.replace('$', '')
       if (!trimCode.startsWith('MDL')) {
         if (!pricesByCode[trimCode] || pricesByCode[trimCode] > item.price) {
-          console.log('adding', trimCode, item.price)
+          debug('adding', { code: trimCode, price: item.price })
           pricesByCode[trimCode] = item.price
-          console.log(JSON.stringify(item, null, 2))
-          console.log('---')
+          debug(item)
         }
       }
     }
@@ -49,7 +49,7 @@ const run = async ({ pricesByCode, inventories }) => {
           GOT_OPTS
         )
 
-        console.log({ inventoryName, model, condition })
+        debug({ inventoryName, model, condition })
 
         results.forEach(result => {
           result.FlexibleOptionsData.forEach(addItem)
