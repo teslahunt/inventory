@@ -44,6 +44,12 @@ module.exports = {
     market: 'GB',
     region: 'Europe'
   },
+  hu: {
+    country: 'Magyarország',
+    language: 'hu',
+    market: 'HU',
+    region: 'Europe'
+  },
   ie: {
     country: 'Ireland',
     language: 'en',
@@ -69,6 +75,12 @@ module.exports = {
     country: 'Portugal',
     language: 'pt',
     market: 'PT',
+    region: 'Europe'
+  },
+  ro: {
+    country: 'România',
+    language: 'ro',
+    market: 'RO',
     region: 'Europe'
   },
   se: { country: 'Sweden', language: 'sv', market: 'SE', region: 'Europe' },
