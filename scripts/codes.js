@@ -35,9 +35,10 @@ const main = async () => {
     })
     .get()
 
-  const optionCodes = codes.reduce((acc, code, index) => {
-    return { ...acc, [code]: titles[index] }
-  }, {})
+  const optionCodes = codes.reduce(
+    (acc, code, index) => ({ ...acc, [code]: titles[index] }),
+    {}
+  )
 
   jsonFuture.save('codes.json', sortObjectByKey(optionCodes))
 }
