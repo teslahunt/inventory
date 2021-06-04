@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Kikobeats/tesla-inventory/compare/v1.5.3...v1.6.0) (2021-06-04)
+
+
+### Features
+
+* add Canada inventories ([368538e](https://github.com/Kikobeats/tesla-inventory/commit/368538e5b7c289f98a8bf93ef2a0c8491bee129d))
+
 ### [1.5.3](https://github.com/Kikobeats/tesla-inventory/compare/v1.5.2...v1.5.3) (2021-05-30)
 
 ### [1.5.2](https://github.com/Kikobeats/tesla-inventory/compare/v1.5.1...v1.5.2) (2021-05-19)
