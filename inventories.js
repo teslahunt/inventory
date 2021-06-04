@@ -31,6 +31,12 @@ module.exports = {
     region: 'Europe'
   },
   es: { country: 'Spain', language: 'es', market: 'ES', region: 'Europe' },
+  'en-ca': {
+    country: 'Canada',
+    language: 'en',
+    market: 'CA',
+    region: 'North America'
+  },
   fi: {
     country: 'Finland',
     language: 'fi',
@@ -38,6 +44,12 @@ module.exports = {
     region: 'Europe'
   },
   fr: { country: 'France', language: 'fr', market: 'FR', region: 'Europe' },
+  'fr-ca': {
+    country: 'Canada',
+    language: 'fr',
+    market: 'CA',
+    region: 'North America'
+  },
   gb: {
     country: 'United Kingdom',
     language: 'en',
