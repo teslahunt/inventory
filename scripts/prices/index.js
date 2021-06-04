@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug-logfmt')('price')
+const debug = require('debug-logfmt')('tesla-inventory:price')
 const jsonFuture = require('json-future')
 const { chain } = require('lodash')
 
@@ -40,21 +40,25 @@ const run = async ({ pricesByCode, inventories }) => {
   for (const inventoryName in inventories) {
     for (const model of MODEL_LETTER) {
       for (const condition of MODEL_CONDITION) {
-        const results = await teslaInventory(
-          inventoryName,
-          {
-            model,
-            condition
-          },
-          GOT_OPTS
-        )
+        try {
+          const results = await teslaInventory(
+            inventoryName,
+            {
+              model,
+              condition
+            },
+            GOT_OPTS
+          )
 
-        debug({ inventoryName, model, condition })
+          debug({ inventoryName, model, condition })
 
-        results.forEach(result => {
-          result.FlexibleOptionsData.forEach(addItem)
-          result.OptionCodeData.forEach(addItem)
-        })
+          results.forEach(result => {
+            result.FlexibleOptionsData.forEach(addItem)
+            result.OptionCodeData.forEach(addItem)
+          })
+        } catch (err) {
+          debug.error(err.message || err, { inventoryName, model, condition })
+        }
       }
     }
   }
