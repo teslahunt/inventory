@@ -11,6 +11,12 @@ module.exports = {
     market: 'BE',
     region: 'Europe'
   },
+  ca: {
+    country: 'Canada',
+    language: 'en',
+    market: 'CA',
+    region: 'North America'
+  },
   ch: {
     country: 'Switzerland',
     language: 'de',
