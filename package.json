@@ -76,7 +76,7 @@
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
-    "prices": "npm run prices:europe && npm run prices:america && npm run prices:ca",
+    "prices": "npm run prices:europe && npm run prices:america && npm run prices:america",
     "prices:america": "(DEBUG=tesla-inventory* node scripts/prices/america.js && git add prices/america.json && git commit -m 'build(update): prices for North America' --no-verify && git push) || true",
     "prices:europe": "(DEBUG=tesla-inventory* node scripts/prices/europe.js && git add prices/europe.json && git commit -m 'build(update): prices for Europe' --no-verify && git push) || true",
     "release": "standard-version -a",
