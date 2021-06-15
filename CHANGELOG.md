@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.7](https://github.com/Kikobeats/tesla-inventory/compare/v1.6.6...v1.6.7) (2021-06-15)
+
+
+### Bug Fixes
+
+* **ci:** script name ([add1198](https://github.com/Kikobeats/tesla-inventory/commit/add1198160f06e5676214e6f8b1e4d277e8104c0))
+
 ### [1.6.6](https://github.com/Kikobeats/tesla-inventory/compare/v1.6.5...v1.6.6) (2021-06-15)
 
 ### [1.6.5](https://github.com/Kikobeats/tesla-inventory/compare/v1.6.4...v1.6.5) (2021-06-13)
