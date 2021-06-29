@@ -11,16 +11,20 @@
   },
   "contributors": [
     {
+      "name": "Kyle Mercier",
+      "email": "ferociouskyle@gmail.com"
+    },
+    {
       "name": "quinnjn",
       "email": "quinn@neumiiller.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kikobeats/tesla-inventory.git"
+    "url": "git+https://github.com/teslahunt/tesla-inventory.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/tesla-inventory/issues"
+    "url": "https://github.com/teslahunt/tesla-inventory/issues"
   },
   "keywords": [
     "cpo",

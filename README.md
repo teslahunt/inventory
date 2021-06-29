@@ -3,9 +3,8 @@
   <br><br>
 </div>
 
-![Last version](https://img.shields.io/github/tag/Kikobeats/tesla-inventory.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/com/teslahunt/tesla-inventory/master.svg?style=flat-square)](https://travis-ci.com/github/teslahunt/tesla-inventory)
-[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/tesla-inventory.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/tesla-inventory)
+![Last version](https://img.shields.io/github/tag/teslahunt/tesla-inventory.svg?style=flat-square)
+[![Coverage Status](https://img.shields.io/coveralls/teslahunt/tesla-inventory.svg?style=flat-square)](https://coveralls.io/github/teslahunt/tesla-inventory)
 [![NPM Status](https://img.shields.io/npm/dm/tesla-inventory.svg?style=flat-square)](https://www.npmjs.org/package/tesla-inventory)
 
 > Retrieve real-time data from Tesla Inventory.
