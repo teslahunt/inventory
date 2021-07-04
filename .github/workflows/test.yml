@@ -34,4 +34,4 @@ jobs:
         run: |
           git config --global user.email ${{ secrets.GH_EMAIL }}
           git config --global user.name ${{ secrets.GH_USER }}
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN=${{ secrets.CONVENTIONAL_GITHUB_RELEASER_TOKEN }} npm run release
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN=${{ secrets.CONVENTIONAL_GITHUB_RELEASER_TOKEN }} NPM_TOKEN=${{ secrets.NPM_TOKEN }} npm run release
