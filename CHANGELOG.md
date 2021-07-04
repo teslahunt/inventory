@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.6.14 (2021-07-04)
+
 ### 1.6.13 (2021-07-04)
 
 ### [1.6.12](https://github.com/teslahunt/tesla-inventory/compare/v1.6.9...v1.6.12) (2021-07-04)
