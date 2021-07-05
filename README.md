@@ -4,7 +4,6 @@
 </div>
 
 ![Last version](https://img.shields.io/github/tag/teslahunt/tesla-inventory.svg?style=flat-square)
-[![Coverage Status](https://img.shields.io/coveralls/teslahunt/tesla-inventory.svg?style=flat-square)](https://coveralls.io/github/teslahunt/tesla-inventory)
 [![NPM Status](https://img.shields.io/npm/dm/tesla-inventory.svg?style=flat-square)](https://www.npmjs.org/package/tesla-inventory)
 
 > Retrieve real-time data from Tesla Inventory.
