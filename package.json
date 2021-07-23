@@ -45,7 +45,7 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "got": "latest",
+    "got": "11",
     "json-future": "latest",
     "lint-staged": "latest",
     "lodash": "latest",
