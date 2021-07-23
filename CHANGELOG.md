@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/teslahunt/tesla-inventory/compare/v1.6.18...v1.7.0) (2021-07-23)
+
+
+### Features
+
+* rename usa into us ([5c15e40](https://github.com/teslahunt/tesla-inventory/commit/5c15e40e1463a267fa6c9db33fbef907a10128e6))
+
 ### 1.6.18 (2021-07-14)
 
 ### 1.6.17 (2021-07-04)
