@@ -45,7 +45,7 @@ test('Model X', async t => {
 })
 
 test('Model Y', async t => {
-  const results = await teslaInventory('usa', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: 'y'
   })

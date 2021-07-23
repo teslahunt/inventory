@@ -12,7 +12,7 @@ const {
   ch, // Switzerland is not EU
   gb, // United Kingdom is not EU
   no, // Norgway is not EU
-  usa, // United States is not EU
+  us, // United States is not EU
   ca, // Canada is not EU
   ...inventories
 } = require('../../inventories')

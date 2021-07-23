@@ -90,7 +90,7 @@ module.exports = {
     region: 'Europe'
   },
   se: { country: 'Sweden', language: 'sv', market: 'SE', region: 'Europe' },
-  usa: {
+  us: {
     country: 'United States',
     language: 'en',
     market: 'US',
