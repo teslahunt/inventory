@@ -19,26 +19,29 @@ const main = async () => {
 
   const $ = cheerio.load(body)
 
-  const table = $('tbody')
-
-  const [, ...codes] = table
-    .find('tr td:nth-child(1)')
-    .map(function () {
-      return $(this).text()
-    })
-    .get()
-
-  const [, ...titles] = table
-    .find('tr td:nth-child(2)')
-    .map(function () {
-      return $(this).text()
-    })
-    .get()
-
-  const optionCodes = codes.reduce(
-    (acc, code, index) => ({ ...acc, [code]: titles[index] }),
-    {}
+  const selector = $(
+    '#root > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div'
   )
+
+  const codes = selector.children()
+
+  const optionCodes = codes
+    .map(function (index) {
+      if (index === 0) return null
+      const el = $(this)
+      const base = el.children()
+      const code = base.children('div div:nth-child(1)').text()
+      const title = base.children('div div:nth-child(2)').text()
+      return { code, title }
+    })
+    .get()
+    .reduce((acc, { code, title }) => ({ ...acc, [code]: title }), {})
+
+  if (Object.keys(optionCodes).length === 0) {
+    throw new Error(
+      'The target website has changed, selectors need to be rework.'
+    )
+  }
 
   jsonFuture.save('codes.json', sortObjectByKey(optionCodes))
 }
