@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.7.22 (2021-10-11)
+
+
+### Bug Fixes
+
+* script ([9446b8c](https://github.com/teslahunt/tesla-inventory/commit/9446b8c109eb13ec1492a715611abc93d84bd806))
+
 ### 1.7.21 (2021-10-11)
 
 ### 1.7.20 (2021-10-11)
