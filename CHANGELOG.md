@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.7.26 (2021-10-23)
+
+
+### Bug Fixes
+
+* remove space ([a7263d8](https://github.com/teslahunt/tesla-inventory/commit/a7263d8f3ecc9678d913452a28f3f45a9b2b4541))
+
 ### 1.7.25 (2021-10-23)
 
 ### 1.7.24 (2021-10-23)
