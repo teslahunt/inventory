@@ -19,19 +19,16 @@ const main = async () => {
 
   const $ = cheerio.load(body)
 
-  const selector = $(
-    '#root > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div'
+  const codes = $(
+    '#root > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div'
   )
-
-  const codes = selector.children()
 
   const optionCodes = codes
     .map(function (index) {
       if (index === 0) return null
       const el = $(this)
-      const base = el.children()
-      const code = base.children('div div:nth-child(1)').text()
-      const title = base.children('div div:nth-child(2)').text()
+      const code = el.children('div:nth-child(1)').text()
+      const title = el.children('div:nth-child(2)').text()
       return { code, title }
     })
     .get()
