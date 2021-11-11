@@ -12,7 +12,7 @@ const GOT_OPTS = {
   }
 }
 
-const MODEL_LETTER = ['x', 's', '3']
+const MODEL_LETTER = ['s', '3', 'x', 'y']
 
 const MODEL_CONDITION = ['used', 'new']
 
