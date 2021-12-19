@@ -47,7 +47,7 @@
     "git-dirty": "latest",
     "got": "11",
     "json-future": "latest",
-    "lint-staged": "latest",
+    "nano-staged": "latest",
     "lodash": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
@@ -95,7 +95,7 @@
       "@commitlint/config-conventional"
     ]
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.js": [
       "prettier-standard"
     ],
@@ -108,6 +108,6 @@
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit",
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "npx nano-staged"
   }
 }
