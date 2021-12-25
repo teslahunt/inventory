@@ -63,7 +63,6 @@
   "files": [
     "codes.json",
     "index.js",
-    "info.json",
     "inventories.js",
     "prices",
     "scripts"
