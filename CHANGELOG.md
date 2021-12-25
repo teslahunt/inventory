@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.8.0 (2021-12-25)
+
+
+### Features
+
+* remove info.json ([e262737](https://github.com/teslahunt/tesla-inventory/commit/e2627371ecc16db32abf4919c51769f1d95f53ba))
+
 ### 1.7.52 (2021-12-25)
 
 ### 1.7.51 (2021-12-25)
