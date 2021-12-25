@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://teslahunt.io/banner-red.png" alt="@teslahunt/title">
+  <img src="https://teslahunt.io/banner-red.png">
   <br><br>
 </div>
 
