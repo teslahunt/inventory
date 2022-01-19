@@ -22,6 +22,7 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     responseType: 'json',
     searchParams: {
       query: JSON.stringify({
+        count: 0,
         query: {
           ...inventoryProps,
           ...opts
