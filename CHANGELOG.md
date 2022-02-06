@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.8.16 (2022-02-06)
+
+
+### Bug Fixes
+
+* add missing got dependency ([330592f](https://github.com/teslahunt/tesla-inventory/commit/330592f3753abd86a99be0b88ab2a7d75a7d18e4)), closes [#9](https://github.com/teslahunt/tesla-inventory/issues/9)
+
 ### 1.8.15 (2022-02-05)
 
 ### 1.8.14 (2022-02-03)
