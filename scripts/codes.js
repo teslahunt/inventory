@@ -1,11 +1,11 @@
 'use strict'
 
+const { Extractor } = require('markdown-tables-to-json')
+const { decodeHTML } = require('entities')
+
 const jsonFuture = require('json-future')
 const { chain } = require('lodash')
-const cheerio = require('cheerio')
 const got = require('got')
-
-const REGEX_ZERO_WIDTH_SPACE = /[\u200B-\u200D\uFEFF]/g
 
 const sortObjectByKey = obj =>
   chain(obj)
@@ -15,41 +15,17 @@ const sortObjectByKey = obj =>
     .value()
 
 const main = async () => {
-  const body = await got('https://tesla-api.timdorr.com/vehicle/optioncodes', {
-    resolveBodyOnly: true
-  })
-
-  const $ = cheerio.load(body)
-
-  const codes = $(
-    '.gitbook-root > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div'
+  const markdown = await got(
+    'https://raw.githubusercontent.com/timdorr/tesla-api/master/docs/vehicle/optioncodes.md',
+    { resolveBodyOnly: true }
   )
 
-  const text = el => el.text().replace(REGEX_ZERO_WIDTH_SPACE, '')
+  const json = Extractor.extractObject(markdown, 'rows', false)
 
-  const optionCodes = codes
-    .map(function (index) {
-      if (index === 0) return null
-      const el = $(this)
-      const code = text(el.children('div:nth-child(1)'))
-      const title = text(el.children('div:nth-child(2)'))
-      const description = text(el.children('div:nth-child(3)'))
-      return { code, title, description }
-    })
-    .get()
-    .reduce(
-      (acc, { code, title, description }) => ({
-        ...acc,
-        [code]: title || description
-      }),
-      {}
-    )
-
-  if (Object.keys(optionCodes).length === 0) {
-    throw new Error(
-      'The target website has changed, selectors need to be rework.'
-    )
-  }
+  const optionCodes = Object.keys(json).reduce((acc, code) => {
+    const { Title: title, Description: description } = json[code]
+    return { ...acc, [code]: decodeHTML(title || description) }
+  }, {})
 
   jsonFuture.save('codes.json', sortObjectByKey(optionCodes))
 }
