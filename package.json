@@ -34,6 +34,9 @@
     "teslaapi",
     "teslamotors"
   ],
+  "dependencies": {
+    "got": "11"
+  },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
@@ -45,7 +48,6 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "got": "11",
     "json-future": "latest",
     "lodash": "latest",
     "nano-staged": "latest",
