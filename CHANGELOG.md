@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.8.17 (2022-02-06)
+
+
+### Bug Fixes
+
+* **codes:** read markdown rather than html ([a3aeed9](https://github.com/teslahunt/tesla-inventory/commit/a3aeed95e0bbc5ae370c0b47de02ef85ccc1eeed))
+
 ### 1.8.16 (2022-02-06)
 
 
