@@ -17,6 +17,30 @@ test('inventory identifier is mandatory', async t => {
   t.is(error.message, 'Tesla inventory `undefined` not found!')
 })
 
+test('inventory should be valid', async t => {
+  const error = await t.throwsAsync(
+    () =>
+      teslaInventory('unicorn', {
+        condition: 'used',
+        model: 's'
+      }),
+    {
+      instanceOf: TypeError
+    }
+  )
+
+  t.is(error.message, 'Tesla inventory `unicorn` not found!')
+})
+
+test('ensure results are consistent', async t => {
+  const results = await teslaInventory('ie', {
+    condition: 'used',
+    model: 'y'
+  })
+
+  t.true(results.every(item => item.Model === 'my'))
+})
+
 test('Model S', async t => {
   const results = await teslaInventory('fr', {
     condition: 'used',

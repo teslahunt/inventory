@@ -33,5 +33,5 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     headers: { 'user-agent': undefined, ...headers }
   })
 
-  return body.results
+  return body.results.filter(result => result.Model === opts.model)
 }
