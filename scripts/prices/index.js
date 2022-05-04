@@ -37,12 +37,12 @@ const run = async ({ pricesByCode, inventories }) => {
     }
   }
 
-  for (const inventoryName in inventories) {
+  for (const inventoryCode in inventories) {
     for (const model of MODEL_LETTER) {
       for (const condition of MODEL_CONDITION) {
         try {
           const results = await teslaInventory(
-            inventoryName,
+            inventoryCode,
             {
               model,
               condition
@@ -50,14 +50,14 @@ const run = async ({ pricesByCode, inventories }) => {
             GOT_OPTS
           )
 
-          debug({ inventoryName, model, condition })
+          debug({ inventoryCode, model, condition })
 
           results.forEach(result => {
             result.FlexibleOptionsData.forEach(addItem)
             result.OptionCodeData.forEach(addItem)
           })
         } catch (err) {
-          debug.error(err.message || err, { inventoryName, model, condition })
+          debug.error(err.message || err, { inventoryCode, model, condition })
         }
       }
     }
