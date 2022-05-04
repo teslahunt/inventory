@@ -2,20 +2,14 @@
 
 const path = require('path')
 
-// only countries with EURO currency
-const {
-  cz, // Croatia coin is not Euro
-  se, // Sweden coin is not Euro
-  dk, // Denmark coin is not Euro
-  hu, // Hungary coin is not not EU
-  is, // Island is not EU
-  ch, // Switzerland is not EU
-  gb, // United Kingdom is not EU
-  no, // Norgway is not EU
-  us, // United States is not EU
-  ca, // Canada is not EU
-  ...inventories
-} = require('../../inventories')
+const NON_EURO_COUNTRIES = ['cz', 'se', 'dk', 'hu', 'is', 'ch', 'gb', 'no']
+
+const inventories = Object.fromEntries(
+  Object.entries(require('../../inventories')).filter(
+    ([code, { region }]) =>
+      region === 'Europe' && !NON_EURO_COUNTRIES.includes(code)
+  )
+)
 
 require('.')({
   filepath: path.resolve(__dirname, '../../prices/europe.json'),
