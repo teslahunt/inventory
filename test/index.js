@@ -2,12 +2,11 @@
 
 const test = require('ava')
 
-const GOT_OPTS = {
-  headers: { 'user-agent': 'googlebot' }
-}
+const inventories = require('../inventories')
 
-const teslaInventory = (inventory, opts) =>
-  require('..')(inventory, opts, GOT_OPTS)
+const GOT_OPTS = { retry: 0, headers: { 'user-agent': 'googlebot' } }
+
+const teslaInventory = (inventory, opts) => require('..')(inventory, opts, GOT_OPTS)
 
 test('inventory identifier is mandatory', async t => {
   const error = await t.throwsAsync(() => teslaInventory(), {
@@ -75,4 +74,14 @@ test('Model Y', async t => {
   })
 
   t.true(results.every(item => item.Model === 'my'))
+})
+
+test('all inventories are reachable', async t => {
+  t.timeout(30000)
+  const inventoryCodes = Object.keys(inventories)
+  t.plan(inventoryCodes.length)
+  for (const inventoryCode of inventoryCodes) {
+    await teslaInventory(inventoryCode, { condition: 'used', model: 's' })
+    t.pass()
+  }
 })
