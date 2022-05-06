@@ -21,10 +21,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teslahunt/tesla-inventory.git"
+    "url": "git+https://github.com/teslahunt/inventory.git"
   },
   "bugs": {
-    "url": "https://github.com/teslahunt/tesla-inventory/issues"
+    "url": "https://github.com/teslahunt/inventory/issues"
   },
   "keywords": [
     "cpo",
