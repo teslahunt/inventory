@@ -6,8 +6,7 @@ const NON_EURO_COUNTRIES = ['cz', 'se', 'dk', 'hu', 'is', 'ch', 'gb', 'no']
 
 const inventories = Object.fromEntries(
   Object.entries(require('../../inventories')).filter(
-    ([code, { region }]) =>
-      region === 'Europe' && !NON_EURO_COUNTRIES.includes(code)
+    ([code, { region }]) => region === 'Europe' && !NON_EURO_COUNTRIES.includes(code)
   )
 )
 
