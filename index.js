@@ -1,37 +1,53 @@
 'use strict'
 
-const got = require('got')
-
 const inventories = require('./inventories')
 
-const TESLA_INVENTORY_API =
-  'https://www.tesla.com/inventory/api/v1/inventory-results'
+const got = require('got').extend({
+  url: 'https://www.tesla.com/inventory/api/v1/inventory-results',
+  responseType: 'json',
+  resolveBodyOnly: true
+})
+
+const toLowerCase = ({ results: items, total_matches_found: totalMatchesFound }) => ({
+  items,
+  total: Number(totalMatchesFound)
+})
+
+const ITEMS_PER_PAGE = 50
 
 module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
-  const inventoryProps = inventories[inventory]
-
-  if (!inventoryProps) {
+  if (!inventories[inventory]) {
     throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
   }
+
+  const { region, ...inventoryProps } = inventories[inventory]
 
   if (opts.model && !opts.model.startsWith('m')) {
     opts.model = `m${opts.model}`
   }
 
-  const { body } = await got(TESLA_INVENTORY_API, {
-    responseType: 'json',
-    searchParams: {
-      query: JSON.stringify({
-        count: 0,
-        query: {
-          ...inventoryProps,
-          ...opts
-        }
-      })
-    },
-    ...gotOpts,
-    headers: { 'user-agent': undefined, ...headers }
-  })
+  const paginate = (outsideOffset = 0) =>
+    got({
+      searchParams: {
+        query: JSON.stringify({
+          outsideSearch: true,
+          outsideOffset,
+          count: 0,
+          query: {
+            ...inventoryProps,
+            ...opts
+          }
+        })
+      },
+      ...gotOpts,
+      headers: { 'user-agent': undefined, ...headers }
+    }).then(toLowerCase)
 
-  return body.results.filter(result => result.Model === opts.model)
+  const page = await paginate()
+  if (page.total < ITEMS_PER_PAGE) return page.items
+
+  const nRequests = Math.ceil(page.total / ITEMS_PER_PAGE) - 1
+  const offsets = [...Array(nRequests).keys()].map(n => (n + 1) * page.items.length)
+  const pages = await Promise.all(offsets.map(paginate))
+  return pages.reduce((acc, { items }) => acc.concat(items), page.items)
 }
