@@ -3,7 +3,7 @@
   "description": "Retrieve real-time data from Tesla Inventory.",
   "homepage": "https://nicedoc.io/Kikobeats/tesla-inventory",
   "version": "1.8.47",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
@@ -64,10 +64,7 @@
     "node": ">= 14"
   },
   "files": [
-    "codes.json",
-    "index.js",
-    "inventories.js",
-    "prices",
+    "src",
     "scripts"
   ],
   "scripts": {
@@ -96,6 +93,14 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./codes": "./src/codes.json",
+    "./inventories": "./src/inventories/index.js",
+    "./package.json": "./package.json",
+    "./prices/america": "./src/prices/america.json",
+    "./prices/europe": "./src/prices/europe.json"
   },
   "nano-staged": {
     "*.js": [

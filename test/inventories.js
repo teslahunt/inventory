@@ -2,7 +2,7 @@
 
 const test = require('ava')
 
-const inventories = require('../inventories')
+const inventories = require('tesla-inventory/inventories')
 
 const GOT_OPTS = { retry: 0, headers: { 'user-agent': 'googlebot' } }
 

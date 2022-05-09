@@ -20,7 +20,7 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
   }
 
-  const { region, ...inventoryProps } = inventories[inventory]
+  const inventoryProps = inventories[inventory]
 
   if (opts.model && !opts.model.startsWith('m')) {
     opts.model = `m${opts.model}`
@@ -30,7 +30,6 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     got({
       searchParams: {
         query: JSON.stringify({
-          outsideSearch: true,
           outsideOffset,
           count: 0,
           query: {

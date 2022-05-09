@@ -1,10 +1,9 @@
 'use strict'
 
 const debug = require('debug-logfmt')('tesla-inventory:price')
+const teslaInventory = require('tesla-inventory')
 const jsonFuture = require('json-future')
 const { chain } = require('lodash')
-
-const teslaInventory = require('../..')
 
 const GOT_OPTS = {
   headers: {
