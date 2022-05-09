@@ -94,9 +94,9 @@
     "./inventories": "./src/inventories/index.js",
     "./inventories/euro": "./src/inventories/euro.js",
     "./package.json": "./package.json",
+    "./prices/cad": "./src/prices/cad.json",
     "./prices/eur": "./src/prices/eur.json",
-    "./prices/usd": "./src/prices/usd.json",
-    "./prices/cad": "./src/prices/cad.json"
+    "./prices/usd": "./src/prices/usd.json"
   },
   "nano-staged": {
     "*.js": [
