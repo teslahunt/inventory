@@ -52,6 +52,7 @@
     "json-future": "latest",
     "lodash": "latest",
     "markdown-tables-to-json": "latest",
+    "meow": "9",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "prettier-standard": "latest",
@@ -64,22 +65,15 @@
     "node": ">= 14"
   },
   "files": [
-    "src",
-    "scripts"
+    "src"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "codes": "(node scripts/codes.js && git add codes.json && git commit -m 'build(update): codes' --no-verify && git push) || true",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "cronjob": "npm run prices && npm run codes && npm run healthcheck",
-    "healthcheck": "curl -sL https://hc-ping.com/b0792794-6548-42d5-9981-b50a401d7667",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
-    "prices": "npm run prices:europe && npm run prices:america",
-    "prices:america": "(DEBUG=tesla-inventory* node scripts/prices/america.js && git add prices/america.json && git commit -m 'build(update): prices for North America' --no-verify && git push) || true",
-    "prices:europe": "(DEBUG=tesla-inventory* node scripts/prices/europe.js && git add prices/europe.json && git commit -m 'build(update): prices for Europe' --no-verify && git push) || true",
     "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
@@ -98,9 +92,11 @@
     ".": "./src/index.js",
     "./codes": "./src/codes.json",
     "./inventories": "./src/inventories/index.js",
+    "./inventories/euro": "./src/inventories/euro.js",
     "./package.json": "./package.json",
-    "./prices/america": "./src/prices/america.json",
-    "./prices/europe": "./src/prices/europe.json"
+    "./prices/eur": "./src/prices/eur.json",
+    "./prices/usd": "./src/prices/usd.json",
+    "./prices/cad": "./src/prices/cad.json"
   },
   "nano-staged": {
     "*.js": [

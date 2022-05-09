@@ -4,7 +4,7 @@ on:
   schedule:
     # Cron job every day at 12:00
     # https://crontab.guru/#0_12_*_*_*
-    - cron:  '0 0 * * *'
+    - cron: '10 0 * * *'
 
 jobs:
   test:
@@ -24,4 +24,5 @@ jobs:
         run: |
           git config --global user.email ${{ secrets.GIT_EMAIL }}
           git config --global user.name ${{ secrets.GIT_USERNAME }}
-          npm run cronjob
+          DEBUG='tesla-inventory*' node scripts/prices --inventory=euro --currency=eur
+          (git add src/prices/eur.json && git commit -m 'build(cron): update prices for eur currency' --no-verify && git push) || true

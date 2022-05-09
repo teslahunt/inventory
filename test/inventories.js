@@ -15,3 +15,7 @@ Object.keys(inventories).forEach(inventoryCode => {
     t.pass()
   })
 })
+
+test('euro', t => {
+  t.snapshot(require('tesla-inventory/inventories/euro'))
+})
