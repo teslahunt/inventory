@@ -2,7 +2,7 @@
 
 const test = require('ava')
 
-const inventories = require('../inventories')
+const inventories = require('tesla-inventory/inventories')
 
 const GOT_OPTS = { retry: 0, headers: { 'user-agent': 'googlebot' } }
 
@@ -14,4 +14,8 @@ Object.keys(inventories).forEach(inventoryCode => {
     await teslaInventory(inventoryCode, { condition: 'used', model: 's' })
     t.pass()
   })
+})
+
+test('euro', t => {
+  t.snapshot(require('tesla-inventory/inventories/euro'))
 })

@@ -1,0 +1,28 @@
+name: cron
+
+on:
+  schedule:
+    # Cron job every day at 12:00
+    # https://crontab.guru/#0_12_*_*_*
+    - cron: '5 0 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+      - name: Install
+        run: npm install --no-package-lock
+      - name: Cron
+        run: |
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
+          git config --global user.name ${{ secrets.GIT_USERNAME }}
+          DEBUG='tesla-inventory*' node node scripts/codes.js
+          (git add src/codes.json && git commit -m 'build(cron): update option codes' --no-verify && git push) || true

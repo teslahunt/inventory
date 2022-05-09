@@ -1,10 +1,30 @@
 'use strict'
 
-const debug = require('debug-logfmt')('tesla-inventory:price')
+const teslaInventory = require('tesla-inventory')
 const jsonFuture = require('json-future')
 const { chain } = require('lodash')
+const path = require('path')
 
-const teslaInventory = require('../..')
+const { flags } = require('meow')()
+
+const { inventory, currency } = flags
+
+if (!inventory) {
+  throw new TypeError('Expected `--inventory` flag.')
+}
+
+if (!currency) {
+  throw new TypeError('Expected `--currency` flag.')
+}
+
+const inventories =
+  inventory === 'euro'
+    ? require('tesla-inventory/inventories/euro')
+    : { [inventory]: require('tesla-inventory/inventories')[inventory] }
+
+const filepath = path.resolve(__dirname, `../src/prices/${currency}.json`)
+
+const debug = require('debug-logfmt')(`tesla-inventory:price:${currency}`)
 
 const GOT_OPTS = {
   headers: {
@@ -23,7 +43,7 @@ const sortObjectByKey = obj =>
     .fromPairs()
     .value()
 
-const run = async ({ pricesByCode, inventories }) => {
+const main = async ({ pricesByCode, inventories }) => {
   const addItem = item => {
     if (item.price) {
       const trimCode = item.code.replace('$', '')
@@ -66,11 +86,7 @@ const run = async ({ pricesByCode, inventories }) => {
   return pricesByCode
 }
 
-module.exports = ({ inventories, filepath }) => {
-  const pricesByCode = require(filepath)
-
-  run({ pricesByCode, inventories }).then(data => {
-    jsonFuture.save(filepath, sortObjectByKey(data))
-    process.exit()
-  })
-}
+main({ pricesByCode: require(filepath), inventories }).then(data => {
+  jsonFuture.save(filepath, sortObjectByKey(data))
+  process.exit()
+})

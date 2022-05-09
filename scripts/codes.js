@@ -27,7 +27,7 @@ const main = async () => {
     return { ...acc, [code]: decodeHTML(title || description) }
   }, {})
 
-  jsonFuture.save('codes.json', sortObjectByKey(optionCodes))
+  jsonFuture.save('src/codes.json', sortObjectByKey(optionCodes))
 }
 
 main()
