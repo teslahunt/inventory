@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/teslahunt/inventory/compare/v1.8.47...v2.0.0) (2022-05-09)
+
+
+### Features
+
+* add pagination ([18e373a](https://github.com/teslahunt/inventory/commit/18e373a4b173aa5f75b05d22906492d744e02b8f))
+
 ### 1.8.47 (2022-05-08)
 
 ### 1.8.46 (2022-05-07)
