@@ -24,5 +24,5 @@ jobs:
         run: |
           git config --global user.email ${{ secrets.GIT_EMAIL }}
           git config --global user.name ${{ secrets.GIT_USERNAME }}
-          DEBUG='tesla-inventory*' node node scripts/codes.js
+          DEBUG='tesla-inventory*' node scripts/codes.js
           (git add src/codes.json && git commit -m 'build(cron): update option codes' --no-verify && git push) || true
