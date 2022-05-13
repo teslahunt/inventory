@@ -1,9 +1,9 @@
 'use strict'
 
 const EURO_COUNTRIES = [
-  'Österreich',
+  'Austria',
   'Belgium',
-  'Deutschland',
+  'Germany',
   'Spain',
   'Finland',
   'France',
@@ -12,7 +12,7 @@ const EURO_COUNTRIES = [
   'Luxembourg',
   'Netherlands',
   'Portugal',
-  'România'
+  'Romania'
 ]
 
 module.exports = Object.fromEntries(

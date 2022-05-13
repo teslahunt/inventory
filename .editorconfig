@@ -19,5 +19,5 @@ indent_style = space
 indent_size = 2
 
 
-[inventories.js]
+[src/inventories/index.js]
 max_line_length = 100
