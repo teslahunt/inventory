@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/teslahunt/inventory/compare/v2.0.4...v3.0.0) (2022-05-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* country is now alpha-3 code
+
+### Features
+
+* normalize inventories ([#12](https://github.com/teslahunt/inventory/issues/12)) ([b88f0d5](https://github.com/teslahunt/inventory/commit/b88f0d5fa1e170d832151e576cb1604692dcaa0c))
+
 ### 2.0.4 (2022-05-12)
 
 ### 2.0.3 (2022-05-10)
