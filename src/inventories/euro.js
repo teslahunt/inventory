@@ -15,6 +15,11 @@ const EURO_COUNTRIES = [
   'Romania'
 ]
 
+const test = inventory => EURO_COUNTRIES.includes(inventory.country)
+
 module.exports = Object.fromEntries(
-  Object.entries(require('.')).filter(([, { country }]) => EURO_COUNTRIES.includes(country))
+  Object.entries(require('.')).filter(([, inventory]) => test(inventory))
 )
+
+module.exports.EURO_COUNTRIES = EURO_COUNTRIES
+module.exports.test = test

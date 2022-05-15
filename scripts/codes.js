@@ -2,17 +2,10 @@
 
 const { Extractor } = require('markdown-tables-to-json')
 const { decodeHTML } = require('entities')
-
 const jsonFuture = require('json-future')
-const { chain } = require('lodash')
 const got = require('got')
 
-const sortObjectByKey = obj =>
-  chain(obj)
-    .toPairs()
-    .sortBy(0)
-    .fromPairs()
-    .value()
+const { sortObjectByKey } = require('./util')
 
 const main = async () => {
   const markdown = await got(
