@@ -21,5 +21,5 @@ module.exports = Object.fromEntries(
   Object.entries(require('.')).filter(([, inventory]) => test(inventory))
 )
 
-module.exports.EURO_COUNTRIES = EURO_COUNTRIES
-module.exports.test = test
+Object.defineProperty(module.exports, 'EURO_COUNTRIES', { value: EURO_COUNTRIES })
+Object.defineProperty(module.exports, 'test', { value: test })

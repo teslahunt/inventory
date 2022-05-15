@@ -17,5 +17,7 @@ Object.keys(inventories).forEach(inventoryCode => {
 })
 
 test('euro', t => {
+  t.true(!!require('tesla-inventory/inventories/euro').EURO_COUNTRIES)
+  t.true(!!require('tesla-inventory/inventories/euro').test)
   t.snapshot(require('tesla-inventory/inventories/euro').EURO_COUNTRIES)
 })
