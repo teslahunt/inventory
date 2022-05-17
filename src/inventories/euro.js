@@ -3,16 +3,17 @@
 const EURO_COUNTRIES = [
   'Austria',
   'Belgium',
-  'Germany',
-  'Spain',
   'Finland',
   'France',
+  'Germany',
+  'Greece',
   'Ireland',
   'Italy',
   'Luxembourg',
   'Netherlands',
   'Portugal',
-  'Romania'
+  'Romania',
+  'Spain'
 ]
 
 const test = inventory => EURO_COUNTRIES.includes(inventory.country)
