@@ -26,3 +26,4 @@ jobs:
           git config --global user.name ${{ secrets.GIT_USERNAME }}
           DEBUG='tesla-inventory*' node scripts/codes.js
           (git add src/codes.json && git commit -m 'build(cron): update option codes' --no-verify && git push) || true
+          curl -sL https://hc-ping.com/030f1771-be5f-4240-b3ad-b1f5b0a059e6
