@@ -30,16 +30,19 @@ test('inventory should be valid', async t => {
 })
 
 test('ensure results are consistent', async t => {
-  const results = await teslaInventory('ie', {
+  const results = await teslaInventory('us', {
     condition: 'used',
-    model: 'y'
+    model: '3'
   })
 
-  t.true(results.every(item => item.Model === 'my'))
+  t.true(results.every(item => item.Model === 'm3'))
+
+  const vins = results.map(item => item.VIN)
+  t.is(vins.length, [...new Set(vins)].length)
 })
 
 test('Model S', async t => {
-  const results = await teslaInventory('fr', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: 's'
   })
@@ -48,7 +51,7 @@ test('Model S', async t => {
 })
 
 test('Model 3', async t => {
-  const results = await teslaInventory('fr', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: '3'
   })
@@ -57,7 +60,7 @@ test('Model 3', async t => {
 })
 
 test('Model X', async t => {
-  const results = await teslaInventory('fr', {
+  const results = await teslaInventory('us', {
     condition: 'used',
     model: 'x'
   })
