@@ -48,5 +48,12 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
   const nRequests = Math.ceil(page.total / ITEMS_PER_PAGE) - 1
   const offsets = [...Array(nRequests).keys()].map(n => (n + 1) * page.items.length)
   const pages = await Promise.all(offsets.map(paginate))
-  return pages.reduce((acc, { items }) => acc.concat(items), page.items)
+
+  return [page, ...pages].reduce((acc, page) => {
+    page.items.forEach(item => {
+      const isAlready = acc.some(({ VIN }) => VIN === item.VIN)
+      if (!isAlready) acc.push(item)
+    })
+    return acc
+  }, [])
 }
