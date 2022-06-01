@@ -50,8 +50,7 @@ const main = async inventories => {
           )
           debug({ inventory: filename, model, condition })
           results.forEach(result => {
-            result.FlexibleOptionsData.forEach(addItem)
-            result.OptionCodeData.forEach(addItem)
+            result.OptionCodePricing.forEach(addItem)
           })
         } catch (err) {
           debug.error(err.message || err, { inventoryCode, model, condition })

@@ -12,7 +12,6 @@ const EURO_COUNTRIES = [
   'Luxembourg',
   'Netherlands',
   'Portugal',
-  'Romania',
   'Slovenia',
   'Spain'
 ]

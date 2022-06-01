@@ -107,6 +107,7 @@
     "./prices/no": "./src/prices/no.json",
     "./prices/pl": "./src/prices/pl.json",
     "./prices/pr": "./src/prices/pr.json",
+    "./prices/ro": "./src/prices/ro.json",
     "./prices/se": "./src/prices/se.json",
     "./prices/si": "./src/prices/si.json",
     "./prices/us": "./src/prices/us.json"
