@@ -30,15 +30,18 @@ test('inventory should be valid', async t => {
 })
 
 test('ensure results are consistent', async t => {
-  const results = await teslaInventory('us', {
-    condition: 'used',
-    model: '3'
-  })
-
-  t.true(results.every(item => item.Model === 'm3'))
-
-  const vins = results.map(item => item.VIN)
-  t.is(vins.length, [...new Set(vins)].length)
+  {
+    const results = await teslaInventory('us', { condition: 'used', model: '3' })
+    t.true(results.every(item => item.Model === 'm3'))
+    const vins = results.map(item => item.VIN)
+    t.is(vins.length, [...new Set(vins)].length)
+  }
+  {
+    const results = await teslaInventory('pr', { condition: 'new', model: 's' })
+    t.true(results.every(item => item.Model === 'ms'))
+    const vins = results.map(item => item.VIN)
+    t.is(vins.length, [...new Set(vins)].length)
+  }
 })
 
 test('Model S', async t => {
