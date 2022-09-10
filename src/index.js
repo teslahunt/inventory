@@ -43,17 +43,21 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     }).then(toLowerCase)
 
   const page = await paginate()
-  if (page.total < ITEMS_PER_PAGE) return page.items
 
-  const nRequests = Math.ceil(page.total / ITEMS_PER_PAGE) - 1
-  const offsets = [...Array(nRequests).keys()].map(n => (n + 1) * page.items.length)
-  const pages = await Promise.all(offsets.map(paginate))
+  const allPages = async () => {
+    const nRequests = Math.ceil(page.total / ITEMS_PER_PAGE) - 1
+    const offsets = [...Array(nRequests).keys()].map(n => (n + 1) * page.items.length)
+    const pages = await Promise.all(offsets.map(paginate))
+    return [page, ...pages].reduce((acc, page) => {
+      page.items.forEach(item => {
+        const isAlready = acc.some(({ VIN }) => VIN === item.VIN)
+        if (!isAlready) acc.push(item)
+      })
+      return acc
+    }, [])
+  }
 
-  return [page, ...pages].reduce((acc, page) => {
-    page.items.forEach(item => {
-      const isAlready = acc.some(({ VIN }) => VIN === item.VIN)
-      if (!isAlready) acc.push(item)
-    })
-    return acc
-  }, [])
+  const promise = page.total < ITEMS_PER_PAGE ? Promise.resolve(page.items) : allPages()
+
+  return promise.then(items => items.filter(item => item.Model === opts.model))
 }
