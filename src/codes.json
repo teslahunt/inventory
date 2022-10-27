@@ -485,6 +485,7 @@
   "S02T": "Seat",
   "S02W": "White Seats",
   "S07W": "White Seats",
+  "S25B": "Model S 2015",
   "S31B": "S31B",
   "S32C": "S32C",
   "S32P": "Black PUR Seats",
@@ -536,6 +537,7 @@
   "T3P3": "Tires M3",
   "T3PS": "Tires M3",
   "TD00": "Tear Down NON-GLIDER",
+  "TIC3": "Tires MS",
   "TIC4": "Tires MX",
   "TIC6": "Tires MS",
   "TIG2": "Summer Tires",
@@ -550,7 +552,8 @@
   "TM0A": "ALPHA PRE-PRODUCTION NON-SALEABLE",
   "TM0B": "BETA PRE-PRODUCTION NON-SALEABLE",
   "TM0C": "PRE-PRODUCTION SALEABLE",
-  "TP01": "Tech Package - No Autopilot",
+  "TP00": "No AP?",
+  "TP01": "No Technology Package",
   "TP02": "Tech Package with Autopilot",
   "TP03": "Tech Package with Enhanced Autopilot",
   "TR00": "No Rear Facing Seats",
@@ -669,5 +672,6 @@
   "YF01": "Matching Yacht Floor",
   "YFCC": "Yatcht Floor Front Console, Décor Matched",
   "YFFC": "Integrated Center Console",
+  "ZCST": "Customer Car",
   "ZINV": "Inventory vehicle"
 }
