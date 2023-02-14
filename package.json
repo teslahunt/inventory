@@ -82,6 +82,9 @@
     "update:dependencies": "ncu -u"
   },
   "license": "MIT",
+  "ava": {
+    "timeout": "2m"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
