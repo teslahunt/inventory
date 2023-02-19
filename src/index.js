@@ -29,7 +29,7 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
   }
 
-  const inventoryProps = inventories[inventory]
+  const { country, ...query } = { ...inventories[inventory], ...opts }
 
   if (opts.model && !opts.model.startsWith('m')) {
     opts.model = `m${opts.model}`
@@ -37,16 +37,14 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
 
   const duration = timestamp()
 
-  const paginate = async (outsideOffset = 0) =>
+  const paginate = async (offset = 0) =>
     got({
       searchParams: {
         query: JSON.stringify({
-          outsideOffset,
+          query,
           count: ITEMS_PER_PAGE,
-          query: {
-            ...inventoryProps,
-            ...opts
-          }
+          offset,
+          outsideOffset: offset
         })
       },
       ...gotOpts,
