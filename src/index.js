@@ -29,11 +29,11 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
     throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
   }
 
-  const { country, ...query } = { ...inventories[inventory], ...opts }
-
   if (opts.model && !opts.model.startsWith('m')) {
     opts.model = `m${opts.model}`
   }
+
+  const { country, ...query } = { ...inventories[inventory], ...opts }
 
   const duration = timestamp()
 
@@ -44,7 +44,8 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
           query,
           count: ITEMS_PER_PAGE,
           offset,
-          outsideOffset: offset
+          outsideOffset: 0,
+          outsideSearch: false
         })
       },
       ...gotOpts,
