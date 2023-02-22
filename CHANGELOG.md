@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.0.242 (2023-02-22)
+
+
+### Bug Fixes
+
+* normalize model ([3696fe5](https://github.com/teslahunt/inventory/commit/3696fe5a77dd86b49995c8cb7e9d0b2d9a274d38))
+
 ### 3.0.241 (2023-02-19)
 
 
