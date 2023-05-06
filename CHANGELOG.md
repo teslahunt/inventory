@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.1.0 (2023-05-06)
+
+
+### Features
+
+* add Australia inventory ([#21](https://github.com/teslahunt/inventory/issues/21)) ([ac98094](https://github.com/teslahunt/inventory/commit/ac980947342e8549587ccfafa9bd6951eb99f355))
+
 ### 3.0.311 (2023-05-06)
 
 ### 3.0.310 (2023-05-05)
