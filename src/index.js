@@ -9,22 +9,16 @@ const timestamp = (start = process.hrtime.bigint()) => () =>
 const got = require('got').extend({
   url: 'https://www.tesla.com/inventory/api/v1/inventory-results',
   responseType: 'json',
-  resolveBodyOnly: true
+  resolveBodyOnly: true,
+  headers: { 'user-agent': undefined }
 })
-
-const toLowerCase = ({ results: items, total_matches_found: totalMatchesFound, ...rest }) => {
-  return {
-    items,
-    total: Number(totalMatchesFound)
-  }
-}
 
 const uniqBy = (arr, prop) =>
   arr.filter((x, i, self) => i === self.findIndex(y => x[prop] === y[prop]))
 
 const ITEMS_PER_PAGE = 50
 
-module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
+module.exports = async (inventory, opts, gotOpts) => {
   if (!inventories[inventory]) {
     throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
   }
@@ -38,19 +32,23 @@ module.exports = async (inventory, opts, { headers, ...gotOpts } = {}) => {
   const duration = timestamp()
 
   const paginate = async (offset = 0) =>
-    got({
-      searchParams: {
-        query: JSON.stringify({
-          query,
-          count: ITEMS_PER_PAGE,
-          offset,
-          outsideOffset: 0,
-          outsideSearch: false
-        })
-      },
-      ...gotOpts,
-      headers: { 'user-agent': undefined, ...headers }
-    }).then(toLowerCase)
+    got(
+      got.mergeOptions(
+        got.defaults.options,
+        {
+          searchParams: {
+            query: JSON.stringify({
+              query,
+              count: ITEMS_PER_PAGE,
+              offset,
+              outsideOffset: 0,
+              outsideSearch: false
+            })
+          }
+        },
+        gotOpts
+      )
+    ).then(({ results }) => ({ items: results }))
 
   let offset = 0
   let items = []
