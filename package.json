@@ -96,6 +96,7 @@
     "./inventories": "./src/inventories/index.js",
     "./inventories/euro": "./src/inventories/euro.js",
     "./package.json": "./package.json",
+    "./prices/au": "./src/prices/au.json",
     "./prices/ca": "./src/prices/ca.json",
     "./prices/ch": "./src/prices/ch.json",
     "./prices/cz": "./src/prices/cz.json",

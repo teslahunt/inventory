@@ -1,5 +1,6 @@
 module.exports = {
   at: { country: 'Austria', language: 'de', market: 'AT', super_region: 'europe' },
+  au: { country: 'Australia', language: 'en', market: 'AU', super_region: 'north america' },
   be: { country: 'Belgium', language: 'nl', market: 'BE', super_region: 'europe' },
   ca: { country: 'Canada', language: 'en', market: 'CA', super_region: 'north america' },
   ch: { country: 'Switzerland', language: 'de', market: 'CH', super_region: 'europe' },
