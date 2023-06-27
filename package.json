@@ -2,7 +2,7 @@
   "name": "tesla-inventory",
   "description": "Retrieve real-time data from Tesla Inventory.",
   "homepage": "https://github.com/Kikobeats/tesla-inventory",
-  "version": "3.1.43",
+  "version": "3.1.44",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
