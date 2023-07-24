@@ -2,7 +2,7 @@
   "name": "tesla-inventory",
   "description": "Retrieve real-time data from Tesla Inventory.",
   "homepage": "https://github.com/Kikobeats/tesla-inventory",
-  "version": "3.1.49",
+  "version": "3.2.0-10",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -35,13 +35,14 @@
     "teslamotors"
   ],
   "dependencies": {
-    "got": "11"
+    "p-retry": "4"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@ksmithut/prettier-standard": "latest",
     "ava": "latest",
+    "browserless": "latest",
     "c8": "latest",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
@@ -55,6 +56,8 @@
     "markdown-tables-to-json": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
+    "puppeteer": "latest",
+    "signal-exit": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
@@ -83,6 +86,10 @@
   },
   "license": "MIT",
   "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/util.js"
+    ],
     "timeout": "2m"
   },
   "commitlint": {
@@ -118,7 +125,8 @@
   },
   "nano-staged": {
     "*.js": [
-      "prettier-standard"
+      "prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"

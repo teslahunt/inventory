@@ -13,12 +13,6 @@ const path = require('path')
 
 const { sortObjectByKey } = require('./util')
 
-const GOT_OPTS = {
-  headers: {
-    'user-agent': 'googlebot'
-  }
-}
-
 const MODEL_LETTER = ['s', '3', 'x', 'y']
 
 const MODEL_CONDITION = ['used', 'new']
@@ -45,14 +39,7 @@ const main = async inventories => {
     for (const model of MODEL_LETTER) {
       for (const condition of MODEL_CONDITION) {
         try {
-          const results = await teslaInventory(
-            inventoryCode,
-            {
-              model,
-              condition
-            },
-            GOT_OPTS
-          )
+          const results = await teslaInventory(inventoryCode, { model, condition })
           debug({ inventory: filename, model, condition })
           results.forEach(result => {
             result.OptionCodePricing.forEach(addItem)
