@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/teslahunt/inventory/compare/v3.1.49...v3.2.0) (2023-07-29)
+
+
+### Features
+
+* fetcher decorator ([#22](https://github.com/teslahunt/inventory/issues/22)) ([1dc1207](https://github.com/teslahunt/inventory/commit/1dc1207dcf4f57f34b84f01c2f5cb307a83ed599))
+
 ### 3.1.49 (2023-07-04)
 
 ### 3.1.48 (2023-07-04)
