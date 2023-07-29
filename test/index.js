@@ -1,10 +1,9 @@
 'use strict'
 
 const test = require('ava')
+const { fetcher } = require('./util')
 
-const GOT_OPTS = { retry: 0, headers: { 'user-agent': 'googlebot' } }
-
-const teslaInventory = (inventory, opts) => require('tesla-inventory')(inventory, opts, GOT_OPTS)
+const teslaInventory = (inventory, opts) => require('tesla-inventory')(fetcher)(inventory, opts)
 
 test('inventory identifier is mandatory', async t => {
   const error = await t.throwsAsync(() => teslaInventory(), {

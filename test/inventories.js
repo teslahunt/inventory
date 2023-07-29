@@ -4,9 +4,7 @@ const test = require('ava')
 
 const inventories = require('tesla-inventory/inventories')
 
-const GOT_OPTS = { retry: 0, headers: { 'user-agent': 'googlebot' } }
-
-const teslaInventory = (inventory, opts) => require('..')(inventory, opts, GOT_OPTS)
+const teslaInventory = (inventory, opts) => require('..')(inventory, opts)
 
 Object.keys(inventories).forEach(inventoryCode => {
   test(inventoryCode, async t => {
