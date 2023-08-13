@@ -17,7 +17,11 @@ $ npm install tesla-inventory --save
 ## Usage
 
 ```js
-const teslaInventory = require('tesla-inventory')
+const createTeslaInventory = require('tesla-inventory')
+
+const fetcher = url => fetch(url).then(res => res.text())
+
+const teslaInventory = createTeslaInventory(fetcher)
 
 teslaInventory('fr', {
   model: 's',
@@ -27,7 +31,16 @@ teslaInventory('fr', {
 
 ## API
 
-### teslaInventory(inventory, [query], [gotOpts])
+### teslaInventory(fetcher)
+
+#### fetcher
+
+*Required*<br>
+Type: `function`
+
+The fetcher function used for performing the networking calls. It should return text ([example](https://github.com/teslahunt/inventory/blob/master/test/index.js#L6)).
+
+### .teslaInventory([query], [gotOpts])
 
 #### inventory
 
