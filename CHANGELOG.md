@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.10 (2023-08-25)
+
+
+### Bug Fixes
+
+* ensure sub-dependency is not ESM ([b3606ac](https://github.com/teslahunt/inventory/commit/b3606ac59c056d0ae7c99b16138469d1b9b8833d))
+
 ### 3.2.9 (2023-08-25)
 
 ### 3.2.8 (2023-08-17)
