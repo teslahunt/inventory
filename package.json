@@ -135,6 +135,11 @@
       "finepack --sort-ignore-object-at ava"
     ]
   },
+  "pnpm": {
+    "overrides": {
+      "markdown-tables-to-json>@ts-stack/markdown": "1.4.0"
+    }
+  },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit",
     "pre-commit": "npx nano-staged"
