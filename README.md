@@ -40,7 +40,7 @@ Type: `function`
 
 The fetcher function used for performing the networking calls. It should return text ([example](https://github.com/teslahunt/inventory/blob/master/test/index.js#L6)).
 
-### .teslaInventory([query], [gotOpts])
+### .teslaInventory([inventory], [query], [fetcherOpts])
 
 #### inventory
 
@@ -61,6 +61,12 @@ These options can be:
 - **condition**: used|new
 - **model**: ms|mx|m3
 - **order**: asc|desc
+
+#### fetcherOpts
+
+Type: `object`
+
+The options to be passed against `fetcher`.
 
 ## License
 
