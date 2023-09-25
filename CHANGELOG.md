@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.34 (2023-09-25)
+
+
+### Bug Fixes
+
+* add error handler ([83b1d24](https://github.com/teslahunt/inventory/commit/83b1d24503b16942bd8877113708e012a05dfb45))
+
 ### 3.2.33 (2023-09-18)
 
 ### 3.2.32 (2023-09-18)
