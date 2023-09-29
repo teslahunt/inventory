@@ -37,13 +37,13 @@ module.exports =
             query,
             count: ITEMS_PER_PAGE,
             offset,
-            outsideOffset: 0,
-            outsideSearch: false
+            outsideOffset: offset,
+            outsideSearch: true
           })
         }).toString()}`
         ).toString()
 
-        debug({ url, ...query })
+        debug({ url, offset, ...query })
 
         const result = await pRetry(
           () =>
@@ -68,8 +68,9 @@ module.exports =
         page = await paginate(offset)
         items = uniqBy(items.concat(page.items), 'VIN')
         offset = items.length
-        debug.info({ ...opts, items: items.length, duration: duration() })
-      } while (page.items.length >= ITEMS_PER_PAGE)
+      } while (page.items.length > 0)
+
+      debug.info({ ...opts, items: items.length, duration: duration() })
 
       return items.filter(item => item.Model === opts.model)
     }
