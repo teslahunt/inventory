@@ -41,9 +41,7 @@ const main = async inventories => {
         try {
           const results = await teslaInventory(inventoryCode, { model, condition })
           debug({ inventory: filename, model, condition })
-          results.forEach(result => {
-            result.OptionCodePricing.forEach(addItem)
-          })
+          results.forEach(result => result.OptionCodePricing.forEach(addItem))
         } catch (err) {
           debug.error(err.message || err, { inventoryCode, model, condition })
         }
