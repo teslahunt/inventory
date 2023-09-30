@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.4.0 (2023-09-30)
+
+
+### Features
+
+* add missing inventories ([#26](https://github.com/teslahunt/inventory/issues/26)) ([f70be04](https://github.com/teslahunt/inventory/commit/f70be04f46a5a08fce5d0ba0545af096313a1569))
+
 ### 3.3.1 (2023-09-30)
 
 ## 3.3.0 (2023-09-29)
