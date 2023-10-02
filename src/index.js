@@ -8,7 +8,7 @@ const inventories = require('./inventories')
 const timestamp =
   (start = process.hrtime.bigint()) =>
     () =>
-      Math.round(Number(process.hrtime.bigint() - start) / 1e6) + 'ms'
+      Math.round(Number(process.hrtime.bigint() - start) / 1e6)
 
 const uniqBy = (arr, prop) =>
   arr.filter((x, i, self) => i === self.findIndex(y => x[prop] === y[prop]))
@@ -70,7 +70,7 @@ module.exports =
         offset = items.length
       } while (page.items.length > 0)
 
-      debug.info({ ...opts, items: items.length, duration: duration() })
+      debug.info({ ...opts, items: items.length, duration: `${duration()}ms` })
 
       return items.filter(item => item.Model === opts.model)
     }
