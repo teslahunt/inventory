@@ -70,7 +70,7 @@ module.exports =
         offset = items.length
       } while (page.items.length > 0)
 
-      debug.info({ ...opts, items: items.length, duration: `${duration()}ms` })
+      debug.info({ inventory, ...opts, items: items.length, duration: `${duration()}ms` })
 
       return items.filter(item => item.Model === opts.model)
     }
