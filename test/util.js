@@ -1,6 +1,12 @@
+'use strict'
+
+const uniqueRandomArray = require('unique-random-array')
+const userAgents = require('top-user-agents')
 const createBrowser = require('browserless')
 const { onExit } = require('signal-exit')
 const puppeteer = require('puppeteer')
+
+const randomUserAgent = uniqueRandomArray(userAgents)
 
 const browser = createBrowser({ puppeteer })
 
@@ -19,7 +25,8 @@ const fetcher = async url => {
       abortTypes: ['image', 'stylesheet', 'font', 'other'],
       adblock: false,
       waitUntil: 'networkidle0',
-      animations: true
+      animations: true,
+      headers: { 'user-agent': randomUserAgent() }
     }
   )
 

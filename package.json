@@ -96,12 +96,14 @@
     "markdown-tables-to-json": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "puppeteer": "21.2.1",
+    "puppeteer": "21.3.7",
     "signal-exit": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "standard-version": "latest"
+    "standard-version": "latest",
+    "top-user-agents": "latest",
+    "unique-random-array": "2"
   },
   "engines": {
     "node": ">= 14"
