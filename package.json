@@ -75,6 +75,7 @@
     "teslamotors"
   ],
   "dependencies": {
+    "@kikobeats/time-span": "~1.0.2",
     "p-retry": "4"
   },
   "devDependencies": {
