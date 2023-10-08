@@ -1,14 +1,10 @@
 'use strict'
 
+const timeSpan = require('@kikobeats/time-span')({ format: n => `${Math.round(n)}ms` })
 const debug = require('debug-logfmt')('tesla-inventory')
 const pRetry = require('p-retry')
 
 const inventories = require('./inventories')
-
-const timestamp =
-  (start = process.hrtime.bigint()) =>
-    () =>
-      Math.round(Number(process.hrtime.bigint() - start) / 1e6)
 
 const uniqBy = (arr, prop) =>
   arr.filter((x, i, self) => i === self.findIndex(y => x[prop] === y[prop]))
@@ -28,7 +24,7 @@ module.exports =
 
       const { country, ...query } = { ...inventories[inventory], ...opts }
 
-      const duration = timestamp()
+      const duration = timeSpan()
 
       const paginate = async (offset = 0) => {
         const url = new URL(
@@ -70,7 +66,7 @@ module.exports =
         offset = items.length
       } while (page.items.length > 0)
 
-      debug.info({ inventory, ...opts, items: items.length, duration: `${duration()}ms` })
+      debug.info({ inventory, ...opts, items: items.length, duration: duration() })
 
       return items.filter(item => item.Model === opts.model)
     }
