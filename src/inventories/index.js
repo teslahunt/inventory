@@ -38,6 +38,7 @@ module.exports = {
   se: { country: 'Sweden', language: 'sv', market: 'SE' },
   sg: { country: 'Singapore', language: 'en', market: 'sg' },
   si: { country: 'Slovenia', language: 'sl', market: 'SI' },
+  th: { country: 'Thailand', language: 'th', market: 'TH' },
   tr: { country: 'Turkey', language: 'tr', market: 'TR' },
   tw: { country: 'Taiwan', language: 'zh', market: 'TW' },
   us: { country: 'United States', language: 'en', market: 'US' }
