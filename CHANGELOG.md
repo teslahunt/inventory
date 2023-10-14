@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.4.24 (2023-10-14)
+
+
+### Bug Fixes
+
+* add thailand ([0ac2413](https://github.com/teslahunt/inventory/commit/0ac241396b54969a3ce5a0e06b4fb88cbfd2e842))
+
 ### 3.4.23 (2023-10-14)
 
 ### 3.4.22 (2023-10-14)
