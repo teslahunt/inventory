@@ -23,12 +23,13 @@ module.exports =
       }
 
       const { country, ...query } = { ...inventories[inventory], ...opts }
+      const domain = inventory === 'cn' ? 'cn' : 'com'
 
       const duration = timeSpan()
 
       const paginate = async (offset = 0) => {
         const url = new URL(
-        `https://www.tesla.com/inventory/api/v1/inventory-results?${new URLSearchParams({
+        `https://www.tesla.${domain}/inventory/api/v1/inventory-results?${new URLSearchParams({
           query: JSON.stringify({
             query,
             count: ITEMS_PER_PAGE,
