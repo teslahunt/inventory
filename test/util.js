@@ -17,9 +17,10 @@ const fetcher = async url => {
 
   const fn = browserless.evaluate(
     async (page, response, error) => {
-      if (!error) return response.text()
-      console.error(error)
-      throw error
+      if (error) throw error
+      const status = response.status()
+      if (response.status() !== 200) throw new TypeError(`Response status: ${status}`)
+      return response.text()
     },
     {
       abortTypes: ['image', 'stylesheet', 'font', 'other'],
