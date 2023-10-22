@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.4.35 (2023-10-22)
+
+
+### Bug Fixes
+
+* tesla.cn ([#29](https://github.com/teslahunt/inventory/issues/29)) ([2838d8d](https://github.com/teslahunt/inventory/commit/2838d8dc6d245c06a99ff20d629ffbe38763856d))
+
 ### 3.4.34 (2023-10-22)
 
 ### 3.4.33 (2023-10-20)
