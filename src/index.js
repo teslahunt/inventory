@@ -24,8 +24,9 @@ module.exports =
 
       const { country, ...query } = { ...inventories[inventory], ...opts }
       const isChina = country === 'cn'
-      const domain = isChina ? 'cn' : 'com'
-      const version = isChina ? 'v1' : 'v4'
+      const { domain, version } = isChina
+        ? { domain: 'cn', version: 'v1' }
+        : { domain: 'com', version: 'v4' }
 
       const duration = timeSpan()
 
