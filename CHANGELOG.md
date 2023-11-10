@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.4.46 (2023-11-10)
+
+
+### Bug Fixes
+
+* paginate fix value ([#30](https://github.com/teslahunt/inventory/issues/30)) ([12253ea](https://github.com/teslahunt/inventory/commit/12253ea6fbd1fcdab87f53302e933c0b160995e0))
+
 ### 3.4.45 (2023-11-08)
 
 ### 3.4.44 (2023-10-30)
