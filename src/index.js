@@ -29,7 +29,7 @@ module.exports =
 
       const paginate = async (offset = 0) => {
         const url = new URL(
-        `https://www.tesla.${domain}/inventory/api/v1/inventory-results?${new URLSearchParams({
+        `https://www.tesla.${domain}/inventory/api/v4/inventory-results?${new URLSearchParams({
           query: JSON.stringify({
             query,
             count: ITEMS_PER_PAGE,
@@ -64,7 +64,7 @@ module.exports =
       do {
         page = await paginate(offset)
         items = uniqBy(items.concat(page.items), 'VIN')
-        offset = items.length
+        offset += ITEMS_PER_PAGE
       } while (page.items.length > 0)
 
       debug.info({ inventory, ...opts, items: items.length, duration: duration() })
