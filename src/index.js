@@ -23,7 +23,7 @@ module.exports =
       }
 
       const { country, ...query } = { ...inventories[inventory], ...opts }
-      const isChina = country === 'cn'
+      const isChina = inventory === 'cn'
       const { domain, version } = isChina
         ? { domain: 'cn', version: 'v1' }
         : { domain: 'com', version: 'v4' }
