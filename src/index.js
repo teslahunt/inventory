@@ -23,26 +23,20 @@ module.exports =
       }
 
       const { country, ...query } = { ...inventories[inventory], ...opts }
-      const isChina = inventory === 'cn'
-      const { domain, version } = isChina
-        ? { domain: 'cn', version: 'v1' }
-        : { domain: 'com', version: 'v4' }
-
+      const domain = inventory === 'cn' ? 'cn' : 'com'
       const duration = timeSpan()
 
       const paginate = async (offset = 0) => {
         const url = new URL(
-        `https://www.tesla.${domain}/inventory/api/${version}/inventory-results?${new URLSearchParams(
-          {
-            query: JSON.stringify({
-              query,
-              count: ITEMS_PER_PAGE,
-              offset,
-              outsideOffset: offset,
-              outsideSearch: true
-            })
-          }
-        ).toString()}`
+        `https://www.tesla.${domain}/inventory/api/v4/inventory-results?${new URLSearchParams({
+          query: JSON.stringify({
+            query,
+            count: ITEMS_PER_PAGE,
+            offset,
+            outsideOffset: offset,
+            outsideSearch: true
+          })
+        }).toString()}`
         ).toString()
 
         debug({ url, offset, ...query })
@@ -69,7 +63,7 @@ module.exports =
       do {
         page = await paginate(offset)
         items = uniqBy(items.concat(page.items), 'VIN')
-        offset = isChina ? items.length : offset + 50
+        offset = items.length
       } while (page.items.length > 0)
 
       debug.info({ inventory, ...opts, items: items.length, duration: duration() })
