@@ -62,7 +62,7 @@ These options can be:
 - **model**: ms|mx|m3
 - **order**: asc|desc
 
-#### fetcherOpts
+#### fetcherOpts
 
 Type: `object`
 
