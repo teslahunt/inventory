@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.4.74 (2023-12-30)
+
+
+### Bug Fixes
+
+* infinite loop ([98409cf](https://github.com/teslahunt/inventory/commit/98409cf4c2ba3ccd081e07c62fbf94bea50e05e4))
+
 ### 3.4.73 (2023-12-30)
 
 ### 3.4.72 (2023-12-28)
