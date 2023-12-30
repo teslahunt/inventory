@@ -106,7 +106,7 @@ test('Model Y used', async t => {
   t.true(results.every(item => item.Model === 'my'))
 })
 
-test('Model Y used (china)', async t => {
+test('Model Y used (China)', async t => {
   const results = await teslaInventory('cn', {
     condition: 'used',
     model: 'y'
@@ -117,6 +117,15 @@ test('Model Y used (china)', async t => {
 
 test('Model Y new', async t => {
   const results = await teslaInventory('us', {
+    condition: 'new',
+    model: 'y'
+  })
+
+  t.true(results.every(item => item.Model === 'my'))
+})
+
+test('Model Y new (Puerto Rico)', async t => {
+  const results = await teslaInventory('pr', {
     condition: 'new',
     model: 'y'
   })

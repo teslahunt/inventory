@@ -59,12 +59,14 @@ module.exports =
       let offset = 0
       let items = []
       let page
+      let pageIndex = -1
 
       do {
         page = await paginate(offset)
+        ++pageIndex
         items = uniqBy(items.concat(page.items), 'VIN')
         offset = items.length
-      } while (page.items.length > 0)
+      } while ((pageIndex !== 0 || page.items.length >= ITEMS_PER_PAGE) && page.items.length > 0)
 
       debug.info({ inventory, ...opts, items: items.length, duration: duration() })
 
