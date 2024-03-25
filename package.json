@@ -97,7 +97,7 @@
     "markdown-tables-to-json": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "puppeteer": "21",
+    "puppeteer": "latest",
     "signal-exit": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
