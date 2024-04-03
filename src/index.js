@@ -6,14 +6,20 @@ const pRetry = require('p-retry')
 
 const inventories = require('./inventories')
 
+const ITEMS_PER_PAGE = 50
+
 const uniqBy = (arr, prop) =>
   arr.filter((x, i, self) => i === self.findIndex(y => x[prop] === y[prop]))
 
-const ITEMS_PER_PAGE = 50
+const onFailedAttemptDefault = (error, debug) => debug.error(error)
 
 module.exports =
   fetcher =>
-    async (inventory, opts, { retries = 2, ...fetcherOpts } = {}) => {
+    async (
+      inventory,
+      opts,
+      { retries = 2, onFailedAttempt = onFailedAttemptDefault, ...fetcherOpts } = {}
+    ) => {
       if (!inventories[inventory]) {
         throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
       }
@@ -48,7 +54,7 @@ module.exports =
               return { items: body.results ?? [] }
             }),
           {
-            onFailedAttempt: debug.error,
+            onFailedAttempt: error => onFailedAttempt(error, debug),
             retries
           }
         )
