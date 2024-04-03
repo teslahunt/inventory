@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.5.0 (2024-04-03)
+
+
+### Features
+
+* add onFailedAttempt ([bfe7e9d](https://github.com/teslahunt/inventory/commit/bfe7e9d01ef326061a9617dfadbf03b38c7a6649))
+
 ### 3.4.149 (2024-04-03)
 
 ### 3.4.148 (2024-04-01)
