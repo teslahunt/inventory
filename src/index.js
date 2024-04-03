@@ -49,9 +49,14 @@ module.exports =
 
         const result = await pRetry(
           () =>
-            fetcher(url, fetcherOpts).then(async text => {
-              const body = JSON.parse(text)
-              return { items: body.results ?? [] }
+            fetcher(url, fetcherOpts).then(async body => {
+              try {
+                const data = JSON.parse(body)
+                return { items: data.results ?? [] }
+              } catch (error) {
+                error.body = body
+                throw error
+              }
             }),
           {
             onFailedAttempt: error => onFailedAttempt(error, debug),
