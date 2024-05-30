@@ -1,10 +1,5 @@
 'use strict'
 
-const https = require('https')
-const http = require('http')
-https.globalAgent = new https.Agent({ keepAlive: true })
-http.globalAgent = new http.Agent({ keepAlive: true })
-
 const teslaInventory = require('tesla-inventory')(require('../test/util').fetcher)
 const euroInventories = require('tesla-inventory/inventories/euro')
 const inventories = require('tesla-inventory/inventories')
