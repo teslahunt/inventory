@@ -5,6 +5,7 @@ on:
     # Cron job every day 12 hours
     # https://crontab.guru/every-12-hours
     - cron: '0 */12 * * *'
+  workflow_dispatch: # This line enables manual triggering of the workflow
 
 jobs:
   test:
