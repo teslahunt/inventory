@@ -96,7 +96,6 @@
     "lodash": "latest",
     "markdown-tables-to-json": "latest",
     "nano-staged": "latest",
-    "npm-check-updates": "latest",
     "puppeteer": "latest",
     "signal-exit": "latest",
     "simple-git-hooks": "latest",
@@ -121,8 +120,6 @@
     "release:github": "github-generate-release",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "c8 ava -c 2",
-    "update": "ncu -u",
-    "update:check": "ncu -- --error-level 2",
     "update:dependencies": "ncu -u"
   },
   "license": "MIT",
