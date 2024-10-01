@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.5.180 (2024-10-01)
+
+
+### Bug Fixes
+
+* script ([606bb63](https://github.com/teslahunt/inventory/commit/606bb63539695ee9518d35eee1d21fa6b0728570))
+
 ### 3.5.179 (2024-09-21)
 
 ### 3.5.178 (2024-09-17)
