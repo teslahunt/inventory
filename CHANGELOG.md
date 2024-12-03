@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.5.223 (2024-12-03)
+
+
+### Bug Fixes
+
+* remove offset ([cac9b25](https://github.com/teslahunt/inventory/commit/cac9b250f6375a8ce133e23e08be98bdb871c6a6))
+
 ### 3.5.222 (2024-11-30)
 
 ### 3.5.221 (2024-11-29)
