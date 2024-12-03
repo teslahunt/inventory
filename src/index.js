@@ -38,7 +38,6 @@ module.exports =
           query: JSON.stringify({
             query,
             count: ITEMS_PER_PAGE,
-            offset,
             outsideOffset: offset,
             outsideSearch: true
           })
