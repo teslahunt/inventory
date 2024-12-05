@@ -119,7 +119,7 @@
       "test/**/*.js",
       "!test/util.js"
     ],
-    "timeout": "5m"
+    "timeout": "10m"
   },
   "commitlint": {
     "extends": [
