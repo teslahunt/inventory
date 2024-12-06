@@ -75,7 +75,7 @@ module.exports =
         page = await paginate(offset)
         ++pageIndex
         items = uniqBy(items.concat(page.items), 'VIN')
-        offset = items.length
+        offset = pageIndex * ITEMS_PER_PAGE
       } while ((pageIndex !== 0 || page.items.length >= ITEMS_PER_PAGE) && page.items.length > 0)
 
       debug.info({ inventory, ...opts, items: items.length, duration: duration() })
