@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.5.225 (2024-12-06)
+
+
+### Bug Fixes
+
+* offset calculation ([889d935](https://github.com/teslahunt/inventory/commit/889d935e39d168823916be6c907e4a7e597ee946))
+
 ### 3.5.224 (2024-12-06)
 
 ### 3.5.223 (2024-12-03)
