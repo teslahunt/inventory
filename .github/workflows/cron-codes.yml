@@ -24,8 +24,6 @@ jobs:
         with:
           version: latest
           run_install: true
-      - name: Setup Puppeteer
-        run: node node_modules/puppeteer/install.mjs
       - name: Cron
         run: |
           git config --global user.email ${{ secrets.GIT_EMAIL }}
