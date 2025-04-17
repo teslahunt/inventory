@@ -6,7 +6,7 @@ const pRetry = require('p-retry')
 
 const inventories = require('./inventories')
 
-const ITEMS_PER_PAGE = 50
+const ITEMS_PER_PAGE = 24
 
 const uniqBy = (arr, prop) =>
   arr.filter((x, i, self) => i === self.findIndex(y => x[prop] === y[prop]))
