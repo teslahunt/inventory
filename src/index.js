@@ -51,7 +51,7 @@ module.exports =
             fetcher(url, fetcherOpts).then(async body => {
               try {
                 const data = JSON.parse(body)
-                return { items: data.results ?? [] }
+                return { items: data.results ?? [], total: Number(data.total_matches_found) }
               } catch (error) {
                 error.body = body
                 throw error
@@ -76,7 +76,11 @@ module.exports =
         ++pageIndex
         items = uniqBy(items.concat(page.items), 'VIN')
         offset = pageIndex * ITEMS_PER_PAGE
-      } while ((pageIndex !== 0 || page.items.length >= ITEMS_PER_PAGE) && page.items.length > 0)
+      } while (
+        (pageIndex !== 0 || page.items.length >= ITEMS_PER_PAGE) &&
+      page.items.length > 0 &&
+      items.length < page.total
+      )
 
       debug.info({ inventory, ...opts, items: items.length, duration: duration() })
 
