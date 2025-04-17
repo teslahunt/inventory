@@ -91,7 +91,6 @@
     "signal-exit": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
-    "standard-markdown": "latest",
     "standard-version": "latest"
   },
   "engines": {
@@ -103,7 +102,7 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "lint": "standard-markdown README.md && standard",
+    "lint": "standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run contributors",
     "pretest": "npm run lint",
@@ -135,9 +134,6 @@
     "*.js": [
       "prettier-standard",
       "standard --fix"
-    ],
-    "*.md": [
-      "standard-markdown"
     ],
     "package.json": [
       "finepack"
