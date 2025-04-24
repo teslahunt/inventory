@@ -26,10 +26,13 @@ jobs:
           version: latest
           run_install: true
       - name: Test
+        if: ${{ !startsWith(github.event.head_commit.message, 'build(cron)') }}
         run: pnpm test
       - name: Report
+        if: ${{ !startsWith(github.event.head_commit.message, 'build(cron)') }}
         run: npx c8 report --reporter=text-lcov > coverage/lcov.info
       - name: Coverage
+        if: ${{ !startsWith(github.event.head_commit.message, 'build(cron)') }}
         uses: coverallsapp/github-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
