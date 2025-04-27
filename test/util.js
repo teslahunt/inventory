@@ -2,6 +2,10 @@
 
 const createBrowser = require('browserless')
 const { onExit } = require('signal-exit')
+const uaHints = require('ua-hints')
+
+const USER_AGENT =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36'
 
 const browser = () =>
   Promise.resolve(
@@ -27,7 +31,11 @@ const fetcher = async url => {
       abortTypes: ['image', 'stylesheet', 'font', 'other'],
       adblock: false,
       waitUntil: 'networkidle0',
-      animations: true
+      animations: true,
+      headers: {
+        'user-agent': USER_AGENT,
+        ...uaHints(USER_AGENT)
+      }
     }
   )
 
