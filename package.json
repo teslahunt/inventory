@@ -49,16 +49,7 @@
     "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
-  "contributors": [
-    {
-      "name": "Kyle Mercier",
-      "email": "ferociouskyle@gmail.com"
-    },
-    {
-      "name": "quinnjn",
-      "email": "quinn@neumiiller.com"
-    }
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/teslahunt/inventory.git"
