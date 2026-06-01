@@ -84,7 +84,6 @@
     "github-generate-release": "latest",
     "json-future": "latest",
     "lodash": "latest",
-    "markdown-tables-to-json": "latest",
     "nano-staged": "latest",
     "puppeteer": "latest",
     "signal-exit": "latest",
@@ -141,9 +140,7 @@
   },
   "pnpm": {
     "neverBuiltDependencies": [],
-    "overrides": {
-      "markdown-tables-to-json>@ts-stack/markdown": "1.4.0"
-    }
+    "overrides": {}
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit",
