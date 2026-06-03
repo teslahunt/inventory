@@ -59,7 +59,7 @@ These options can be:
 
 - **arrangeby**: Price
 - **condition**: used|new
-- **model**: ms|mx|m3
+- **model**: ms|mx|m3|my|ct
 - **order**: asc|desc
 
 #### fetcherOpts

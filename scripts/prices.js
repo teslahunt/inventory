@@ -8,7 +8,7 @@ const path = require('path')
 
 const { sortObjectByKey } = require('./util')
 
-const MODEL_LETTER = ['s', '3', 'x', 'y']
+const MODEL_LETTER = ['s', '3', 'x', 'y', 'ct']
 
 const MODEL_CONDITION = ['used', 'new']
 

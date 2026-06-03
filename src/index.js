@@ -24,7 +24,7 @@ module.exports =
         throw new TypeError(`Tesla inventory \`${inventory}\` not found!`)
       }
 
-      if (opts.model && !opts.model.startsWith('m')) {
+      if (opts.model && opts.model.length === 1) {
         opts.model = `m${opts.model}`
       }
 

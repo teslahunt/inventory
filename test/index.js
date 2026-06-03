@@ -132,3 +132,12 @@ test('Model Y new (Puerto Rico)', async t => {
 
   t.true(results.every(item => item.Model === 'my'))
 })
+
+test('Cybertruck new', async t => {
+  const results = await teslaInventory('us', {
+    condition: 'new',
+    model: 'ct'
+  })
+
+  t.true(results.every(item => item.Model === 'ct'))
+})
