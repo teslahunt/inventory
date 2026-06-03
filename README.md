@@ -47,7 +47,7 @@ The fetcher function used for performing the networking calls. It should return 
 *Required*<br>
 Type: `string`
 
-The Tesla Inventory identifier, see [`inventories`](/inventories.js).
+The Tesla Inventory identifier, see [`inventories`](/src/inventories/index.js).
 
 #### query
 
