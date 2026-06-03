@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.363](https://github.com/teslahunt/inventory/compare/v3.5.362...v3.5.363) (2026-06-03)
+
+
+### Bug Fixes
+
+* replace markdown-tables-to-json with inline parser ([9476d03](https://github.com/teslahunt/inventory/commit/9476d037da43d41604575bbd86726341ca253715))
+* use length check for single-char model code prefix ([#49](https://github.com/teslahunt/inventory/issues/49)) ([3ca9e0c](https://github.com/teslahunt/inventory/commit/3ca9e0cef908adb24c671882e4a0457f977d7810))
+
 ### 3.5.362 (2026-04-28)
 
 ### 3.5.361 (2026-04-22)
