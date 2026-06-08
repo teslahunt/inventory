@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.5.364 (2026-06-08)
+
 ### [3.5.363](https://github.com/teslahunt/inventory/compare/v3.5.362...v3.5.363) (2026-06-03)
 
 
